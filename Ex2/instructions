@@ -1,0 +1,23 @@
+CREATE A SIMPLE VISUAL COMPOSITION:
+
+ONLY use the canvas + javascript –> NO external libraries (p5 etc…)
+
+HAS to have at least ONE custom object definition
+    - Make sure that this object is instantiated and used in your composition
+
+ANIMATE at least one of the components
+
+HAVE at least one event listener
+    - Make sure that the event triggered “activates” one of your components
+            - (i.e. I click on a sphere).
+    - This component should change OVER time in some way when activated by an event.
+
+THE REST: is up to you & you can use code from class (or external resources).
+
+
+BONUS:
+Implement the functionality to allow for one of your components to be “activated” by the mouse press.
+Write the code that will then determine HOW long the mouse was pressed for (on the component).
+Affect the component using this derived information.
+
+Instructions pulled from c-lab class website.

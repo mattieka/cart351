@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<!-- ====================== H T M L     S T A R T ========================= -->
+
+<html>
+
+<!-- =========================== H E A D ================================== -->
+
+<head>
+
+<!-- =================== C A N V A S    C O L O U R ======================= -->
+  <style>
+  body{
+    margin:0;
+    padding:0;
+  }
+  canvas{
+    background:#303030;
+    margin:0;
+    padding:0;
+  }
+  </style>
+</head>
+
+<!-- =========================== B O D Y ================================== -->
+
+<body>
+
+<!-- ========================= S C R I P T ================================ -->
+
+  <script>
+
+    // S E T    U P
+    window.onload = function (){
+        let canvas = document.getElementById ('canvasSize');
+        let lightBulb = canvas.getContext ('2d');
+
+    // E L L I P S E     V A R I A B L E S
+        let lightX = canvas.width/2;
+        let lightY = canvas.height/2;
+        let lightRadius = 100;
+        let startAngle = 0
+        let endAngle = Math.PI * 2;
+
+    // I N I T I A L      E L L I P S E     C O L O U R S
+        lightBulb.fillStyle = "white";
+
+    // D R A W     E L L I P S E
+        lightBulb.beginPath();
+          lightBulb.arc(lightX, lightY, lightRadius, startAngle, endAngle, true);
+          lightBulb.fill();
+        lightbulb.closePath();
+
+    // D R A W     B U T T O N S
+
+
+
+    }
+
+
+
+  </script>
+
+<!-- ========================== C A N V A S =============================== -->
+
+  <canvas id= "canvasSize" width="500" height="500">
+  </canvas>
+
+<!-- ========================= I M A G E S ================================ -->
+
+
+</body>
+
+</html>
+
+<!-- ===================== I M A G E    C R E D I T S =====================
+
+1) Light Switch
+      On: https://publicdomainvectors.org/en/free-clipart/Switch-on/50394.html
+      Off:  https://publicdomainvectors.org/en/free-clipart/White-switch-off/50395.html
