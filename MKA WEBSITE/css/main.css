@@ -1,7 +1,148 @@
+/* ---------------------------- FONT IMPORT ------------------------------- */
 
-h2{
-  text-align: center;
+@import url('https://fonts.googleapis.com/css?family=Kreon|Ubuntu');
+
+html{
+  background-color: #000807;
 }
-h3{
-  text-align: center;
+
+/* --------------------------- TEXT FORMATTING ---------------------------- */
+
+a:link {
+  text-decoration: none;
 }
+
+a:hover {
+  color: #9395D3;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+#topSection {
+  background-color: #FBF9FF;
+}
+
+.title {
+  text-align: center;
+  font-family: 'Kreon', serif;
+  background-color: #9395D3;
+  color: #000807;
+  font-size: 3em;
+  padding-bottom: 10px;
+}
+
+.github {
+  text-align: center;
+  font-family: 'Ubuntu', sans-serif;
+  color: #000807;
+  background-color: #FBF9FF;
+  font-size: 1.5em;
+  margin-top: -1em;
+
+}
+
+.intro {
+  text-align: center;
+  font-family: 'Ubuntu', sans-serif;
+  color: #000807;
+  background-color: #FBF9FF;
+  font-size: 1.5em;
+  margin-top: -.75em;
+  padding-bottom: .1%;
+  margin-bottom: 1em;
+}
+
+#assignments {
+  text-align: center;
+  font-family: 'Kreon', serif;
+  color: #000807;
+  background-color: #B3B7EE;
+  font-size: 2em;
+  padding-bottom: 5px;
+}
+
+#project {
+  text-align: center;
+  font-family: 'Kreon', serif;
+  color: #000807;
+  background-color: #B3B7EE;
+  font-size: 2em;
+  padding-bottom: 5px;
+}
+
+#reflections{
+  text-align: center;
+  font-family: 'Kreon', serif;
+  color: #000807;
+  background-color: #B3B7EE;
+  font-size: 2em;
+  padding-bottom: 5px;
+}
+
+#presentation{
+  text-align: center;
+  font-family: 'Kreon', serif;
+  color: #000807;
+  background-color: #B3B7EE;
+  font-size: 2em;
+  padding-bottom: 5px;
+}
+
+/* --------------- LINK ALIGNMENT AND MORE TEXT FORMATTING------------------ */
+
+/* ASSIGNMENTS*/
+
+#assignmentContainer{
+  text-align: justify;
+  background-color: #FBF9FF;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  margin-bottom: 1.5em;
+
+}
+
+#assignmentContainer div {
+  display: inline-block;
+  padding-left: 28%;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+/* PROJECT */
+#projectContainer{
+  text-align: justify;
+  background-color: #FBF9FF;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  margin-bottom: 1.5em;
+}
+
+#projectContainer div {
+  display: inline-block;
+  padding-left: 15%;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+/* REFLECTIONS */
+#reflectionsContainer {
+  text-align: justify;
+  font-family: 'Ubuntu', sans-serif;
+  background-color: #FBF9FF;
+  margin-bottom: 1.5em;
+  padding-top: 1%;
+  padding-bottom: 1%;
+
+}
+
+#reflectionsContainer div {
+  display: inline-block;
+  padding-left: 18%;
+}
+
+
+/* ---------------------- SOURCES AND CREDIT -----------------------------
+
+1) fonts imported from Google Fonts, I used Ubuntu and Kreon.
+2) colour scheme generated at https://coolors.co/ .
+3) lots of help from https://www.w3schools.com/ .
