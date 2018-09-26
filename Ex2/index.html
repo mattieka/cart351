@@ -39,6 +39,58 @@
 
 
   </style>
+
+  <!-- ========================= S C R I P T ================================ -->
+
+    <script>
+
+      // L O A D    C A N V A S
+      window.onload = function (){
+          let canvas = document.getElementById ("canvasSize");
+          let lightBulb = canvas.getContext ('2d');
+
+      // E L L I P S E     V A R I A B L E S
+          let lightX = canvas.width/2;
+          let lightY = canvas.height/2;
+          let lightRadius = 100;
+          let startAngle = 0
+          let endAngle = Math.PI * 2;
+
+
+      // E V E N T     L I S T E N E R
+          canvas.addEventListener("mousedown",function(event){
+            console.log("canvas is clicked")
+            console.log("light bulb status: "+lightBulb.isPressed)
+          });
+
+      // I N I T I A L      E L L I P S E     C O L O U R S
+          lightBulb.fillStyle = "rgba(255,255,255,1.0)";
+          lightBulb.strokeStyle = "rgba(255,0,0,1.0)";
+          lightBulb.isPressed = true;
+
+
+      // D R A W     E L L I P S E
+          lightBulb.beginPath();
+            lightBulb.arc(lightX, lightY, lightRadius, startAngle, endAngle, true);
+            lightBulb.fill();
+            lightBulb.stroke();
+          lightBulb.closePath();
+
+      // C L I C K I N G      T H E     S W I T C H
+          this.switchClick = function(){
+            if(Math.sqrt(Math.pow((event.clientX-lightX),2)+Math.pow((event.clientY-lightY),2))<lightRadius/2) {
+    console.log("rect pressed:::"+this.eID);
+    lightBulb.isPressed = !lightbulb.isPressed;
+          }
+// HEY YA BIG CLOWN YOU SET THE SWITCH TO THE LIGHT BULB INSTEAD OF THE SWITCH
+//IS THAT HOW YOU TURN A LIGHT ON IN YOUR BIZARRE LITTLE WORLD YA CRETIN 
+      }
+    }
+
+
+
+    </script>
+
 </head>
 
 <!-- =========================== B O D Y ================================== -->
@@ -48,59 +100,9 @@
 <!-- ========================= I M A G E S ================================ -->
 
   <!-- light switch -->
-    <div id="switch" ><img id="button" src="assets/off.png" onclick="handleClick()"/></div>
+    <div id="switch" ><img id="button" src="assets/on.png"></div>
 
 
-<!-- ========================= S C R I P T ================================ -->
-
-  <script>
-
-    // S E T    U P
-    window.onload = function (){
-        let canvas = document.getElementById ('canvasSize');
-        let lightBulb = canvas.getContext ('2d');
-
-    // E L L I P S E     V A R I A B L E S
-        let lightX = canvas.width/2;
-        let lightY = canvas.height/2;
-        let lightRadius = 100;
-        let startAngle = 0
-        let endAngle = Math.PI * 2;
-
-    // I N I T I A L      E L L I P S E     C O L O U R S
-        lightBulb.fillStyle = "white";
-
-    // D R A W     E L L I P S E
-        lightBulb.beginPath();
-          lightBulb.arc(lightX, lightY, lightRadius, startAngle, endAngle, true);
-          lightBulb.fill();
-        lightBulb.closePath();
-
-    // C L I C K     B U T T O N
-        let lightState = "off";
-          if (lightState = "off") {
-            (document.getElementById("button").src=('/assets/off.png'));
-          }
-
-          if (lightState = "on") {
-            (document.getElementById("button").src=('/assets/on.png'));
-          }
-
-        function handleClick(){
-            console.log ("switch pressed");
-            console.log (lightState);
-              if (lightState = "off") {
-                lightState = "on";
-              }
-        }
-
-        let switchClick = document.getElementById("switch");
-            switchClick.addEventListener("click",handleClick);
-    }
-
-
-
-  </script>
 
 <!-- ========================== C A N V A S =============================== -->
 
