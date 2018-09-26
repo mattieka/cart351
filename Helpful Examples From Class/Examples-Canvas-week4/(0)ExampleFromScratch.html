@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+
+<!-- ************************ H E A D **************************** -->
+
+<head>
+  <title> Examples </title>
+  <style>
+  body{
+    margin:0;
+    padding:0;
+  }
+  canvas{
+    background:black;
+}
+  </style>
+
+<!-- *********************** S C R I P T ***************************** -->
+
+  <script>
+// Make sure that canvas is drawn only when the canvas exists //
+  window.onload = function(){
+
+
+// get the canvas
+let canvas = document.getElementById("testCanvas");
+
+//get the context
+let context = canvas.getContext("2d");
+
+let shapeList = [];
+const NUM_SHAPES = 5;
+
+//parameters: (thing youre listening for in quotes, function (event))
+canvas.addEventListener("mousedown",function(event){
+  console.log("canvas mouse clicked");
+  //now we need to know what we're clicking on
+  for(let i = 0; i<NUM_SHAPES;i++){
+    shapeList[i].hitTest(event);
+  }
+});
+
+canvas.addEventListener("mousemove",function(event) {
+  for(let i = 0; i<NUM_SHAPES;i++){
+    shapeList[i].hitTestOver(event);
+  }
+});
+
+for (let i = 0; i<NUM_SHAPES;i++){
+  let r = Math.floor((Math.random()*255)+1);
+  let g = Math.floor((Math.random()*255)+1);
+  let b = Math.floor((Math.random()*255)+1);
+  shapeList.push(new customShape(i*70+100,canvas.height/2,50,50,r,g,b,1.0,(i%5)+1,(i%6)+2,i));
+}
+
+requestAnimationFrame(run);
+
+function run() {
+  context.clearRect(0,0,canvas.width,canvas.height);
+//  myShape.display();
+//  myShape.update();
+  for (let i = 0; i<NUM_SHAPES;i++){
+    shapeList[i].display();
+//    shapeList[i].update();
+  }
+  requestAnimationFrame(run);
+}
+
+
+// C U S T O M    S H A P E    F U N C T O N
+
+function customShape(x,y,w,h,r,g,b,a,speedX,speedY,eid) {
+  this.x = x;
+  this.y = y;
+  this.width = w;
+  this.height = h;
+  this.r = r;
+  this.g = g;
+  this.b = b;
+  this.a = a;
+  this.innerW = this.width/2;
+  this.innerH = this.height/2;
+  this.speedX = speedX;
+  this.speedY = speedY;
+//  this is the starting angle of your shape!!
+  this.theta = 0;
+// check id
+  this.eID = eid;
+//each square (instace) wants a boolean
+this.isPressed=false;
+// boolean for opacity
+this.isOver = false;
+
+  this.display = function (){
+      this.innerX = this.x+this.innerW/2;
+      this.innerY = this.y + this.innerH/2;
+      if(this.isOver === true){
+        this.a = this.a - 0.01;
+      }
+      this.col = "rgba("+this.r+","+this.g+","+this.b+","+this.a+")";
+      context.fillStyle = this.col;
+
+      //rotation
+
+      //saves current 0,0 of canvas
+      context.save();
+
+      //translation
+      context.translate(this.x,this.y)
+      //rotation
+      context.rotate(this.theta);
+
+      if(this.isPressed === true){
+        this.theta = this.theta + 0.02;
+      }
+      //draw rectangle that is filled
+      context.fillRect(-this.width/2,-this.height/2,this.width,this.height);
+
+      //cut out a hole in the rectangle
+
+      context.clearRect(-this.width/2+this.innerW/2,-this.height/2+this.innerH/2,this.innerW,this.innerH);
+      context.restore();
+  }
+
+  this.update = function(){
+    if (this.x>canvas.width || this.x < 0){
+      this.speedX = this.speedX*-1;
+    }
+
+    if (this.y>canvas.height || this.y < 0){
+      this.speedY = this.speedY*-1;
+    }
+
+  this.x = this.x+this.speedX;
+  this.y = this.y+this.speedY;
+  }
+
+//collision detection is d=sqrt((x2-x1)^2 + (y2-y1)^2)
+this.hitTest = function(){
+  if(Math.sqrt(Math.pow((event.clientX-this.x),2)+Math.pow((event.clientY-this.y),2))<this.width/2) {
+    console.log("rect pressed:::"+this.eID);
+    this.isPressed = !this.isPressed;
+  }
+}
+
+this.hitTestOver = function(){
+  if(Math.sqrt(Math.pow((event.clientX-this.x),2)+Math.pow((event.clientY-this.y),2))<this.width/2) {
+    console.log("rect over:::"+this.eID);
+    this.isOver = true;
+  }
+  else {
+    this.isOver = false;
+    this.a = 1.0;
+  }
+}
+
+}
+
+}
+  </script>
+</head>
+
+<!-- *********************** B O D Y ******************************-->
+
+<body>
+  <canvas id = "testCanvas" width = 500 height =500></canvas>
+</body>
+</html>
