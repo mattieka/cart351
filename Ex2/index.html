@@ -47,6 +47,8 @@
       // L O A D    C A N V A S
       window.onload = function (){
           let canvas = document.getElementById ("canvasSize");
+          let lightSwitchImage = document.getElementById("button");
+          let lightSwitch = canvas.getContext("2d");
           let lightBulb = canvas.getContext ('2d');
 
       // E L L I P S E     V A R I A B L E S
@@ -56,18 +58,21 @@
           let startAngle = 0
           let endAngle = Math.PI * 2;
 
+      // S W I T C H     S T U F F
+          lightSwitch.isPressed = true;
 
       // E V E N T     L I S T E N E R
-          canvas.addEventListener("mousedown",function(event){
+          lightSwitchImage.addEventListener("mousedown",function(event){
             console.log("canvas is clicked")
-            console.log("light bulb status: "+lightBulb.isPressed)
+            console.log("light switch status: "+lightSwitch.isPressed)
+            lightSwitch.switchClick(event);
           });
+
+//STILL NEED TO FIX ELLIPSE COLOUR CHANGE!! //
 
       // I N I T I A L      E L L I P S E     C O L O U R S
           lightBulb.fillStyle = "rgba(255,255,255,1.0)";
           lightBulb.strokeStyle = "rgba(255,0,0,1.0)";
-          lightBulb.isPressed = true;
-
 
       // D R A W     E L L I P S E
           lightBulb.beginPath();
@@ -77,14 +82,19 @@
           lightBulb.closePath();
 
       // C L I C K I N G      T H E     S W I T C H
-          this.switchClick = function(){
-            if(Math.sqrt(Math.pow((event.clientX-lightX),2)+Math.pow((event.clientY-lightY),2))<lightRadius/2) {
-    console.log("rect pressed:::"+this.eID);
-    lightBulb.isPressed = !lightbulb.isPressed;
+          lightSwitch.switchClick = function(){
+            if(Math.sqrt(Math.pow((event.clientX-lightSwitchImage.x),2)+Math.pow((event.clientY-lightSwitchImage.y),2))<lightSwitchImage.width) {
+            lightSwitch.isPressed = !lightSwitch.isPressed;
           }
-// HEY YA BIG CLOWN YOU SET THE SWITCH TO THE LIGHT BULB INSTEAD OF THE SWITCH
-//IS THAT HOW YOU TURN A LIGHT ON IN YOUR BIZARRE LITTLE WORLD YA CRETIN 
-      }
+            if (lightSwitch.isPressed === true) {
+              document.getElementById("button").src = "assets/on.png";
+              lightBulb.fill = "rgba(255,255,255,1.0)";
+            }
+            if(lightSwitch.isPressed === false) {
+              document.getElementById("button").src = "assets/off.png";
+              lightBulb.fillStyle = "rgba(255,255,255,0)";
+            }
+        }
     }
 
 
