@@ -55,15 +55,17 @@
           let lightX = canvas.width/2;
           let lightY = canvas.height/2;
           let lightRadius = 100;
-          let startAngle = 0
+          let startAngle = 0;
           let endAngle = Math.PI * 2;
+
 
       // S W I T C H     S T U F F
           lightSwitch.isPressed = true;
 
       // E V E N T     L I S T E N E R
           lightSwitchImage.addEventListener("mousedown",function(event){
-            console.log("canvas is clicked")
+            lightSwitch.isPressed = !lightSwitch.isPressed;
+            console.log("canvas is clicked");
             console.log("light switch status: "+lightSwitch.isPressed)
             lightSwitch.switchClick(event);
           });
@@ -75,24 +77,29 @@
           lightBulb.strokeStyle = "rgba(255,0,0,1.0)";
 
       // D R A W     E L L I P S E
-          lightBulb.beginPath();
+      requestAnimationFrame(run);
+
+      function run() {
+            lightBulb.clearRect (0,0, lightBulb.width,lightBulb.height);
+            lightBulb.beginPath();
             lightBulb.arc(lightX, lightY, lightRadius, startAngle, endAngle, true);
             lightBulb.fill();
             lightBulb.stroke();
-          lightBulb.closePath();
-
+            lightBulb.closePath();
+            requestAnimationFrame(run);
+}
       // C L I C K I N G      T H E     S W I T C H
           lightSwitch.switchClick = function(){
             if(Math.sqrt(Math.pow((event.clientX-lightSwitchImage.x),2)+Math.pow((event.clientY-lightSwitchImage.y),2))<lightSwitchImage.width) {
-            lightSwitch.isPressed = !lightSwitch.isPressed;
+
           }
             if (lightSwitch.isPressed === true) {
               document.getElementById("button").src = "assets/on.png";
-              lightBulb.fill = "rgba(255,255,255,1.0)";
+              lightBulb.fillStyle = "rgba(255,255,255,1.0)";
             }
             if(lightSwitch.isPressed === false) {
               document.getElementById("button").src = "assets/off.png";
-              lightBulb.fillStyle = "rgba(255,255,255,0)";
+              lightBulb.fillStyle = "rgba(0,0,0,1.0)";
             }
         }
     }
