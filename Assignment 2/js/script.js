@@ -41,18 +41,14 @@ function planet (x,y,w,h,vx,vy,color,centerX,centerY,tempAngle,hRadius,vRadius,r
   this.rotatePlanet = function() {
     fill(this.color);
     noStroke();
-    push();
+    push ();
       this.tempAngle = this.tempAngle + this.rotateSpeed;
       this.x = this.hRadius * cos(this.tempAngle);
       this.y = this.vRadius * sin(this.tempAngle);
       translate(canvas.width/2,canvas.height/2);
-      fill(this.color);
-      noStroke();
-      ellipse(this.x,this.y,this.w,this.h);
-// I THINK YOU CAN MAYBE PUT AN ORBIT DRAWING FUNCTION INTO THE ROTATE FUNCTION??!?!?
+      orbit (this.x,this.y,this.w,this.h);
+    pop ();
 
-      orbit ()
-    pop();
     }
 //  }
 }
