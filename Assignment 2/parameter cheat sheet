@@ -1,1 +1,14 @@
 planet parameters
+  x value
+  y value
+  width
+  height
+  velocity x
+  velocity y
+  color
+  center x
+  center y
+  current angle
+  horizontal radius
+  vertical radius
+  rotate speed 
