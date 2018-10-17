@@ -1,0 +1,137 @@
+NOTES
+
+
+*************************************CHAPTER 1: mattie learns about selectors
+
+jquery commands are all about selecting a thing to change , then indicating what you want to change about it
+  syntax is $(selector).action()
+
+  selector = thing u wanna change
+  action = how you wanna change the thing
+  $ = holler holler get dollar, never forget it
+
+the selectors tend to be elements that exist in an html document
+
+jquery uses the same syntax as CSS to select elements
+
+----------------------------------
+
+before you do anything in jquery its good to have a document ready function which looks like this:
+
+$(document).ready(function(){
+   // jQuery methods go here...
+});
+
+this is so that the functions don't happen before the page is fully loaded because then itll explode and you jsut die
+
+----------------------------------
+
+example: you can select html element names and it changes them all , so if you did smth like
+
+  $("p")
+
+you're targeting all of the paragraph (p) elements. and ofc you can nest them in another jquery command
+
+----------------------------------
+
+like in css, you can select elements by ID which you give w/ the good ol #idName . call for it like this
+
+  $("#idName")
+
+class is the same too, its .className , so
+
+  $(".className")
+
+-----------------------------------
+
+hot tip: to avoid your html file becoming a cluttered warzone, put ur jquery/other javascript stuff in separate files
+just dont forget to include the command in the head that lets computer read them
+
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+  </script>
+  <script src="my_jquery_functions.js"></script>
+</head>
+
+
+
+*************************************CHAPTER 2: mattie learns about events
+
+generally users do things on web pages, like click and scroll or press keys. stuff like that are called "events"
+
+get hip with the lingo: when an event is triggered by something, you use the word "fired" . use exactly the same as youd use the word triggered
+
+    example: the keypress event is fired the moment you press a key
+
+also, "methods" i think means the things that happen in a function. (actions?)
+
+--------------------------------
+
+define what happens in an event like this
+
+    $("p").click(function() {
+        cool stuff that happens when p is clicked goes here
+      });
+
+HEY! quick heads up. you gotta end jquery functions with the hot mess of });, because god is dead i guess
+
+there are lots of event handlers that exist already so google them like some kinda animal
+
+--------------------------------
+
+but WAIT, theres MORE
+
+  you can have multiple event handlers attached to one selector by using the on() function.
+
+      $("p").on({
+      mouseenter: function(){
+        $(this).css("background-color", "lightgray");
+        },
+        mouseleave: function(){
+        $(this).css("background-color", "lightblue");
+        },
+        click: function(){
+        $(this).css("background-color", "yellow");
+        }
+      });
+
+amazing
+
+again im not going to write or memorize every method that exists for jquery so just google it
+
+******************************CHAPTER 3: mattie finally uncovers the mysteries behind callback functions
+
+callback functions are functions that you put INSIDE the parameters of an action, which will execute AFTER the inital action is ajaxComplete
+thats not even CLOSE to what i thought a callback function did but anyway, ive been enlightened
+
+------------
+
+CHAINING! just like for SHINIES in POKEMON! except thats not what it is here so i dont care
+
+thats not actually
+
+chaining is when you apply multiple event handlers to a selector at the same time without having to make them separate statements
+
+you just "append" the next on you want right after it. i really thought "append" meant "subtract" when in fact it means the opposite
+my whole life has been a lie
+
+    example: $("#p1").css("color", "red").slideUp(2000).slideDown(2000);
+
+this is a hot mess to look at , and i hate it, so you can write it like this just fine:
+
+    $("#p1").css("color", "red")
+        .slideUp(2000)
+        .slideDown(2000);
+
+if you do this though, make sure only the last one has a semicolon or else the program will be like "what the fuck, richard"
+
+********************************* CHAPTER 4: the DOM
+
+i hate that fanfic has given me a completely different idea of what "dom" is and i'll never be free again
+
+in this case, DOM means Document Object Model. this makes it EVEN EASIER to manipulate elements and attributes apparently.
+
+google these also
+
+
+HERES WHERE WE LEFT OFF: https://www.w3schools.com/jquery/jquery_ajax_intro.asp
