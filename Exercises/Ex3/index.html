@@ -17,7 +17,8 @@
             function getDetails() {
               $.getJSON("activities.json",function(data){
                 //if successful
-                desplayTitle(data);
+                displayTitle(data);
+                displayDetails(data);
                 console.log(data);
                 let loaded = true;
               })
@@ -31,11 +32,41 @@
               //put the label into the div with the id "title"
               }
           //DISPLAY TITLE (label)
-          function desplayTitle(data){
+          function displayTitle(data){
             $("#title").text(data.Label);
             $("#title").appendTo("#title");
             $("#subtitle").text(data.SubLabel);
             $("#subtitle").appendTo("#subtitle");
+          }
+
+          //DISPLAY DETAILS (activities,snack,line position)
+          function displayDetails(data){
+            //theres many DailyDetails,list as array
+            let details = data["DailyDetails"];
+
+            for (var i = 0; i < details.length; i++) {
+              //declare variables to make things easier to read (for me, anyway)
+              let detailsArticle = $("<article>");
+              let dayH2 = $("<h2>");
+              let linePositionPara = $("<p>");
+              let snackPara = $("<p>");
+              let activityPara = $("<p>");
+
+              // associate the correct data with its respective html element
+              $(dayH2).text(details[i].Day);
+              $(linePositionPara).text("Place in line: " + details[i].LinePosition);
+              $(snackPara).text("Today's Snack: " + details[i].Snack);
+              $(activityPara).text("Today's Activity: " + details[i].Activity);
+
+              //append that data to its html element
+              $(dayH2).appendTo(detailsArticle);
+              $(linePositionPara).appendTo(detailsArticle);
+              $(snackPara).appendTo(detailsArticle);
+              $(activityPara).appendTo(detailsArticle);
+
+              $("#section").append(detailsArticle);
+            }
+
           }
             });
    </script>
@@ -58,6 +89,8 @@
       <div id="title"></div>
       <div id="subtitle"></div>
       <div id="details"></div>
+      <section id="section">
+      </section>
   </body>
 </html>
 
