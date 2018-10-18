@@ -1,0 +1,34 @@
+{
+  "Label":"Afterschool Job Details",
+  "SubLabel": "This data is loaded from a json file!",
+  "DailyDetails":
+  [
+    {
+      "Day": "Thursday",
+      "LinePosition": "Front",
+      "Snack": "Apple Crumble",
+      "Activity": "Cooking"
+    },
+
+    {
+      "Day": "Friday",
+      "LinePosition": "Back",
+      "Snack": "Popcorn",
+      "Activity": "Dungeons & Dragons"
+    },
+
+    {
+      "Day": "Monday",
+      "LinePosition": "Middle",
+      "Snack": "Crackers",
+      "Activity": "Yugioh Trading Card Game"
+    },
+
+    {
+      "Day": "Wednesday",
+      "LinePosition": "Front",
+      "Snack": "Oatmeal Cookies",
+      "Activity": "Digimon Digital Adventures"
+    }
+  ]
+}

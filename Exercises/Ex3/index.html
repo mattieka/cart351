@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<!-- ************************ H E A D  *******************************-->
+  <head>
+    <meta charset="utf-8">
+   <title>JSON LOAD EX</title>
+
+   <!-- add jquery library -->
+  <script src = "libs/jquery-3.3.1.min.js"></script>
+   <script>
+   // put script to call json data
+      //wait for document to load
+      $(document).ready(function() {
+          //run getDetails function when the searchbutton is clicked
+          //CLICK EVENT
+          $("#searchButton").click(getDetails);
+            function getDetails() {
+              $.getJSON("activities.json",function(data){
+                //if successful
+                desplayTitle(data);
+                console.log(data);
+                let loaded = true;
+              })
+                //if failed
+                .fail(function() {
+                console.log("error")
+              });
+              //declare variable searchItem in order to log what search item was entered
+              let searchItem = $("#searchText").val();
+              console.log(searchItem);
+              //put the label into the div with the id "title"
+              }
+          //DISPLAY TITLE (label)
+          function desplayTitle(data){
+            $("#title").text(data.Label);
+            $("#title").appendTo("#title");
+            $("#subtitle").text(data.SubLabel);
+            $("#subtitle").appendTo("#subtitle");
+          }
+            });
+   </script>
+
+  </head>
+<!-- ************************ B O D Y *******************************-->
+  <body>
+    <!-- body goes here  -->
+    <h1>
+      Type in one of the days indicated below.
+    </h1>
+
+    <div>
+      <p> Thursday, Friday, Monday, Wednesday.</p>
+      <!-- create text box -->
+      <p>
+        <input type="text" id="searchText" value="Type Here!">
+        <input type="button" id="searchButton" value="Search!">
+      </p>
+      <div id="title"></div>
+      <div id="subtitle"></div>
+      <div id="details"></div>
+  </body>
+</html>
+
+
+  <!--
+-->
