@@ -3,6 +3,8 @@
 <!-- ************************ H E A D  *******************************-->
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Mali|Questrial" rel="stylesheet">
    <title>JSON LOAD EX</title>
 
    <!-- add jquery library -->
@@ -15,6 +17,7 @@
           //CLICK EVENT
           $("#searchButton").click(getDetails);
             function getDetails() {
+              $("#section").empty();
               $.getJSON("activities.json",function(data){
                 //if successful
                 displayTitle(data);
@@ -26,9 +29,7 @@
                 .fail(function() {
                 console.log("error")
               });
-              //declare variable searchItem in order to log what search item was entered
-              let searchItem = $("#searchText").val();
-              console.log(searchItem);
+
               //put the label into the div with the id "title"
               }
           //DISPLAY TITLE (label)
@@ -41,10 +42,16 @@
 
           //DISPLAY DETAILS (activities,snack,line position)
           function displayDetails(data){
+            //declare variable searchItem in order to log what search item was entered
+            let searchItem = $("#searchText").val();
+            console.log(searchItem);
+
             //theres many DailyDetails,list as array
             let details = data["DailyDetails"];
 
             for (var i = 0; i < details.length; i++) {
+              if (searchItem.toLowerCase() === details[i].Day.toLowerCase()) {
+
               //declare variables to make things easier to read (for me, anyway)
               let detailsArticle = $("<article>");
               let dayH2 = $("<h2>");
@@ -65,8 +72,8 @@
               $(activityPara).appendTo(detailsArticle);
 
               $("#section").append(detailsArticle);
+              }
             }
-
           }
             });
    </script>
@@ -75,22 +82,27 @@
 <!-- ************************ B O D Y *******************************-->
   <body>
     <!-- body goes here  -->
-    <h1>
-      Type in one of the days indicated below.
-    </h1>
+    <div id="divContainer">
+      <h1>
+        What Did Mattie Do At Their Childcare Job Today?
+      </h1>
 
-    <div>
-      <p> Thursday, Friday, Monday, Wednesday.</p>
-      <!-- create text box -->
-      <p>
-        <input type="text" id="searchText" value="Type Here!">
-        <input type="button" id="searchButton" value="Search!">
-      </p>
-      <div id="title"></div>
-      <div id="subtitle"></div>
-      <div id="details"></div>
-      <section id="section">
-      </section>
+      <h2>
+        Type in one of the days indicated below.
+      </h2>
+      <div>
+        <p> Thursday, Friday, Monday, Wednesday.</p>
+        <!-- create text box -->
+        <p>
+          <input type="text" id="searchText" value="Type Here!">
+          <input type="button" id="searchButton" value="Search!">
+        </p>
+
+        <div id="title"></div>
+        <div id="subtitle"></div>
+        <div id="details"></div>
+        <section id="section"></section>
+      </div>
   </body>
 </html>
 

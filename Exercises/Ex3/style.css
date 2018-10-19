@@ -1,0 +1,38 @@
+/* --------------------------- S T Y L E ------------------------------- */
+
+h1 {
+  font-family: 'Mali', cursive;
+  background-color: #c199ef;
+  width:50%;
+  display: inline-block;
+}
+
+h2 {
+  font-weight: bold;
+  font-family: 'Questrial', sans-serif;
+}
+
+#title, #subtitle {
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+
+article {
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+#divContainer {
+  text-align: center;
+}
+
+div {
+  font-family: 'Questrial', sans-serif;
+  display: block;
+}
+
+section {
+  background-color: #c199ef;
+  width: 20%;
+  display: inline-block;
+}
