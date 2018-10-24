@@ -1,0 +1,38 @@
+NOTES
+
+*************************************CHAPTER 1: echo (echo,(echo,(echooooooo))
+
+when youre gonna do php stuff in atom , dont forget to download the PHP server package
+http://php.net/manual/en/install.php
+thats a website you can use if youre missing stuff/need help setting up
+
+make a .php file and set it up like an html file. to use php stuff you gotta put it in php script tags, which look like this:
+
+<?php
+  echo "jsdfdgdg text aosijgdoij";
+?>
+
+functions arent case sensitive, BUT VARIABLES ARE!!
+
+php variables start with a $ sign
+
+echo and print functions are mostly the same. echo functions are cool because you can put html markup in them and itll understand
+
+you can make "objects" in php that store data and how to process it (functions)
+
+example:
+
+  class Car {
+    function Car() {
+      $this->model = "VW"
+    }
+  }
+
+you can create instances of that class and specify information about them.
+
+example:
+
+  $punchBuggie = new Car;
+  echo $punchBuggie->model
+
+so this says that punchBuggie is a new car, then it goes back to the class and sees that Ah, the model should be VW, so it prints that onscreen.

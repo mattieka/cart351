@@ -101,14 +101,14 @@ again im not going to write or memorize every method that exists for jquery so j
 
 ******************************CHAPTER 3: mattie finally uncovers the mysteries behind callback functions
 
-callback functions are functions that you put INSIDE the parameters of an action, which will execute AFTER the inital action is ajaxComplete
+callback functions are functions that you put INSIDE the parameters of an action, which will execute AFTER the inital action is done
 thats not even CLOSE to what i thought a callback function did but anyway, ive been enlightened
 
 ------------
 
 CHAINING! just like for SHINIES in POKEMON! except thats not what it is here so i dont care
 
-thats not actually
+thats not actually true
 
 chaining is when you apply multiple event handlers to a selector at the same time without having to make them separate statements
 
@@ -133,5 +133,19 @@ in this case, DOM means Document Object Model. this makes it EVEN EASIER to mani
 
 google these also
 
+********************************* CHAPTER 5: AJAX , sounds like kojax, reminds me of souvlaki, anyway,
 
-HERES WHERE WE LEFT OFF: https://www.w3schools.com/jquery/jquery_ajax_intro.asp
+ajax let you load/display new data on the page without having to reload the whole page.
+
+using the load() function is the most useful/powerful way of doing this
+
+example
+
+    $(selector).load(URL,data,callback)
+
+    $("#div1").load("demo_text.html #p1");
+  so what this does is put the p1 of the demo text into div1. sweet
+
+GET vs POST
+
+get retrieves data from a server. post submits data to a specific source.
