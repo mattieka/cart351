@@ -6,7 +6,7 @@ html{
   background-color: #000807;
 }
 
-/* ------------------------ TEXT FORMATTING (HOME) ------------------------- */
+/* --------------------------- TEXT FORMATTING ---------------------------- */
 
 a:link {
   text-decoration: none;
@@ -16,12 +16,9 @@ a:hover {
   color: #9395D3;
 }
 
-a {
+a:visited {
   text-decoration: none;
-  color: #000807;
 }
-
-
 
 #topSection {
   background-color: #FBF9FF;
@@ -108,7 +105,7 @@ a {
 
 #assignmentContainer div {
   display: inline-block;
-  padding-left: 24%;
+  padding-left: 28%;
   font-family: 'Ubuntu', sans-serif;
 }
 
@@ -142,124 +139,7 @@ a {
   display: inline-block;
   padding-left: 18%;
 }
-/* ---------------------- TEXT FORMATTING (PROPOSAL) ----------------------- */
 
-#titleProposal {
-  text-align: center;
-  font-family: 'Kreon', serif;
-  background-color: #9395D3;
-  color: #000807;
-  font-size: 3em;
-  padding-bottom: 10px;
-}
-
-#questionsSection li {
-  text-align: left;
-  font-family: 'Kreon', serif;
-  background-color: #9395D3;
-  color: #000807;
-  font-size: 1.2em;
-  padding-right: 10%;
-  padding-left: 10%;
-}
-
-#questionsSection p {
-  text-align: left;
-  font-family: 'Kreon', serif;
-  background-color: #9395D3;
-  color: #000807;
-  font-size: 1.1em;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-#question {
-  font-size: 1.4em;
-  font-style: italic;
-}
-
-#boardContainer p {
-  display: block;
-  text-align: left;
-  font-family: 'Kreon', serif;
-  background-color: #9395D3;
-  color: #000807;
-  font-size: 1.4em;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-#boardContainer img {
-  width: 50%;
-  height: 50%;
-}
-
-#boardContainer {
-  text-align: left;
-  font-family: 'Kreon', serif;
-  background-color: #9395D3;
-  color: #000807;
-  font-size: 1.2em;
-  padding-right: 10%;
-  padding-left: 10%;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-h2 {
-  text-align: left;
-  font-family: 'Kreon', serif;
-  background-color: #9395D3;
-  color: #000807;
-  font-size: 2.5em;
-  padding-bottom: 10px;
-  padding-left: 10%;
-}
-
-#similarProjects li {
-  text-align: left;
-  font-family: 'Kreon', serif;
-  background-color: #9395D3;
-  color: #000807;
-  font-size: 1.2em;
-  padding-right: 10%;
-  padding-left: 10%;
-}
-
-#similarProjects p {
-  text-align: left;
-  font-family: 'Kreon', serif;
-  background-color: #9395D3;
-  color: #000807;
-  font-size: 1.1em;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-#similarTitle a {
-  font-size: 1.4em;
-  font-style: italic;
-}
-
-#difference h2 {
-  text-align: left;
-  font-family: 'Kreon', serif;
-  background-color: #9395D3;
-  color: #000807;
-  font-size: 2.5em;
-}
-
-#difference p {
-  text-align: left;
-  font-family: 'Kreon', serif;
-  background-color: #9395D3;
-  color: #000807;
-  font-size: 1.1em;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-right: 10%;
-  padding-left: 10%;
-}
 
 /* ---------------------- SOURCES AND CREDIT -----------------------------
 
