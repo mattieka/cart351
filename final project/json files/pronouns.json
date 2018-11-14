@@ -8,12 +8,65 @@
   {"pronoun": "they"},
 
 
-  {"pronoun": ""},
-  {"pronoun": ""},
-  {"pronoun": ""},
-  {"pronoun": ""},
-  {"pronoun": ""},
-  {"pronoun": ""},
-  {"pronoun": ""},
+  {"pronoun": "me"},
+  {"pronoun": "us"},
+  {"pronoun": "him"},
+  {"pronoun": "her"},
+  {"pronoun": "it"},
+  {"pronoun": "them"},
+
+
+  {"pronoun": "mine"},
+  {"pronoun": "yours"},
+  {"pronoun": "his"},
+  {"pronoun": "hers"},
+  {"pronoun": "ours"},
+  {"pronoun": "theirs"},
+
+  {"pronoun": "myself"},
+  {"pronoun": "yourself"},
+  {"pronoun": "yourselves"},
+  {"pronoun": "ourselves"},
+  {"pronoun": "himself"},
+  {"pronoun": "herself"},
+  {"pronoun": "itself"},
+  {"pronoun": "themself"},
+  {"pronoun": "themselves"},
+
+
+  {"pronoun": "this"},
+  {"pronoun": "that"},
+  {"pronoun": "these"},
+  {"pronoun": "those"},
+
+
+  {"pronoun": "who"},
+  {"pronoun": "whose"},
+  {"pronoun": "which"},
+  {"pronoun": "what"},
+  {"pronoun": "whatever"},
+  {"pronoun": "whoever"},
+  {"pronoun": "whichever"},
+
+  {"pronoun": "anything"},
+  {"pronoun": "anyone"},
+  {"pronoun": "another"},
+  {"pronoun": "each"},
+  {"pronoun": "all"},
+  {"pronoun": "some"},
+  {"pronoun": "none"},
+  {"pronoun": "everyone"},
+  {"pronoun": "everything"},
+  {"pronoun": "nobody"},
+  {"pronoun": "nothing"},
+  {"pronoun": "other"},
+  {"pronoun": "several"},
+  {"pronoun": "something"},
+  {"pronoun": "someone"},
+  {"pronoun": "most"},
+  {"pronoun": "neither"},
+  {"pronoun": "such"},
+  {"pronoun": "much"},
+  {"pronoun": "either"}
 
 ]

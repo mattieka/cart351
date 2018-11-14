@@ -59,6 +59,7 @@ Word generation:
   - preposition
   - conjunction
   - determiner
+  - punctuation
 
 */
 /****************************************************************************/
