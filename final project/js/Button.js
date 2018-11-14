@@ -1,3 +1,11 @@
+/****************************************************************************/
+                              //BUTTON OBJECT
+/****************************************************************************/
+
+/****************************************************************************/
+                              //CONSTRUCTOR
+/****************************************************************************/
+
 function Button(x,y,w,h,text,type) {
   this.x = x;
   this.y = y;
@@ -6,6 +14,10 @@ function Button(x,y,w,h,text,type) {
   this.text = text;
   this.type = type;
 }
+
+/****************************************************************************/
+                            //DISPLAY FUNCTION
+/****************************************************************************/
 
 Button.prototype.display = function() {
   rectMode(CENTER);
@@ -17,6 +29,10 @@ Button.prototype.display = function() {
   text(this.text,this.x,this.y);
 }
 
+/****************************************************************************/
+        //BUTTON FUNCTION FUNCTION (makes button do what its meant to)
+/****************************************************************************/
+
 Button.prototype.buttonFunction = function() {
   buttonDistance = dist(mouseX,mouseY,this.x,this.y);
   if (this.text === "New Word" && buttonDistance < this.w/2 && buttonDistance < this.h/2) {
@@ -27,3 +43,24 @@ Button.prototype.buttonFunction = function() {
     }
   }
 }
+
+/****************************************************************************/
+                                //NOTES
+/****************************************************************************/
+
+/* Listing button types that need to exist, for my own benefit.
+
+Word generation:
+  - noun
+  - verb
+  - adjective
+  - adverb (maybe just make endings so adjectives can also be used as adverbs?)
+  - pronouns
+  - preposition
+  - conjunction
+  - determiner
+
+*/
+/****************************************************************************/
+                                //END
+/****************************************************************************/
