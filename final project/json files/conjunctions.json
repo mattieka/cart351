@@ -1,0 +1,24 @@
+[
+  {"conjunction": "and"},
+  {"conjunction": "or"},
+  {"conjunction": "but"},
+  {"conjunction": "nor"},
+  {"conjunction": "so"},
+  {"conjunction": "for"},
+  {"conjunction": "because"},
+  {"conjunction": "though"},
+  {"conjunction": "while"},
+  {"conjunction": "if"},
+  {"conjunction": "than"},
+  {"conjunction": "whereas"},
+  {"conjunction": "whether"},
+  {"conjunction": "before"},
+  {"conjunction": "as"},
+  {"conjunction": "both"},
+  {"conjunction": "not"},
+  {"conjunction": "rather"},
+  {"conjunction": "thus"},
+  {"conjunction": "hence"},
+  {"conjunction": "besides"}
+
+]
