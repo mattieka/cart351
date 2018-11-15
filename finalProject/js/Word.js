@@ -44,5 +44,18 @@ function dragWord() {
 }
 
 /****************************************************************************/
+                            //JSON PRELOAD
+/****************************************************************************/
+
+// a handy function that preloads all the word lists 
+function preloadWordLists() {
+  conjunctionList = loadJSON("jsonFiles/conjunctions.json");
+  determinerList = loadJSON("jsonFiles/determiners.json");
+  prepositionList = loadJSON("jsonFiles/prepositions.json");
+  pronounsList = loadJSON("jsonFiles/pronouns.json");
+  punctuationList = loadJSON("jsonFiles/punctuation.json");
+}
+
+/****************************************************************************/
                                 //END
 /****************************************************************************/

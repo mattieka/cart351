@@ -20,17 +20,32 @@ var draggedSprite = null; //initialize variable of any sprite that can be dragge
 
 // WORD-RELATED VARIABLES
 var words = []; // array that stores displayed words
-var extraWordCount = 0 // variable that keeps count of extra words 
+var extraWordCount = 0 // variable that keeps count of extra words
 
 // BUTTON RELATED VARIABLES
 var buttonDistance; //calculates distance between mouse and button
 var wordButton; // variable for the button that generates a new word
+
+// JSON VARIABLES
+var conjunctionList;
+var determinerList;
+var prepositionList;
+var pronounsList;
+var punctuationList;
 
 //POEM CANVAS SHORTCUT VARIABLES
 var poemCanvasLeft;
 var poemCanvasRight;
 var poemCanvasTop;
 var poemCanvasBottom;
+
+/****************************************************************************/
+                              //PRELOAD
+/****************************************************************************/
+
+function preload() {
+  preloadWordLists();
+}
 
 /****************************************************************************/
                                 //SETUP
