@@ -8,7 +8,7 @@
 
 function wordsSetup() {
   for (var i = 0; i < 1; i++) {
-    words.push(createSprite(width/2,height/2,100,30));
+    words.push(new Magnet(width/2,height/2,100,30));
   };
 }
 
