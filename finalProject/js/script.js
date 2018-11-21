@@ -20,6 +20,8 @@ var draggedSprite = null; //initialize variable of any sprite that can be dragge
 
 // WORD-RELATED VARIABLES
 var words = []; // array that stores displayed words
+var listNum; //variable that stores a number that refers to a word list
+var chosenWord; //variable that stores a word from JSON selected by the chooseWord function
 var extraWordCount = 0 // variable that keeps count of extra words
 
 // BUTTON RELATED VARIABLES

@@ -11,8 +11,10 @@ function Magnet(x,y,w,h,wordBox,word) {
   this.y = y;
   this.w = w;
   this.h = h;
-  this.wordBox = wordBox;
-  this.word = word;
-
   this.wordBox = createSprite(this.x,this.y,this.w,this.h);
+  this.word = word;
+}
+
+Magnet.prototype.display = function() {
+  text(chosenWord,this.x,this.y);
 }
