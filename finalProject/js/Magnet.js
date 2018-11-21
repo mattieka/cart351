@@ -13,8 +13,29 @@ function Magnet(x,y,w,h,wordBox,word) {
   this.h = h;
   this.wordBox = createSprite(this.x,this.y,this.w,this.h);
   this.word = word;
+
+  this.displayWord = function() {
+    textSettings();
+    text(this.word,this.wordBox.position.x,this.wordBox.position.y+this.h/5);
+  };
 }
 
-Magnet.prototype.display = function() {
-  text(chosenWord,this.x,this.y);
+/****************************************************************************/
+                            //DRAW FUNCTION
+/****************************************************************************/
+
+function magnetsDraw() {
+  for (let i = 0; i<words.length; i++) {
+    words[i].displayWord();
+  }
+}
+
+/****************************************************************************/
+                        //TEXT SETTINGS FUNCTION
+/****************************************************************************/
+
+function textSettings() {
+  textAlign(CENTER);
+  textSize(20);
+  fill("#000000");
 }

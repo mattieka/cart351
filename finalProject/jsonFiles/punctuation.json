@@ -1,13 +1,15 @@
-[
-  {"punctuation": "."},
-  {"punctuation": "..."},
-  {"punctuation": "?"},
-  {"punctuation": "!"},
-  {"punctuation": ","},
-  {"punctuation": "'"},
-  {"punctuation": "@"},
-  {"punctuation": ":"},
-  {"punctuation": ";"},
-  {"punctuation": "~"},
-  {"punctuation": "&"}
-]
+{"punctuationArray":
+  [
+    {"punctuation": "."},
+    {"punctuation": "..."},
+    {"punctuation": "?"},
+    {"punctuation": "!"},
+    {"punctuation": ","},
+    {"punctuation": "'"},
+    {"punctuation": "@"},
+    {"punctuation": ":"},
+    {"punctuation": ";"},
+    {"punctuation": "~"},
+    {"punctuation": "&"}
+  ]  
+}

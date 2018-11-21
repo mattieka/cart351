@@ -8,7 +8,7 @@
 
 function wordsSetup() {
   for (var i = 0; i < 1; i++) {
-    chooseWord();
+    let chosenWord = chooseWord();
     words.push(new Magnet(width/2,height/2,100,30,this.wordBox,chosenWord));
   };
 }
@@ -18,15 +18,16 @@ function wordsSetup() {
 /****************************************************************************/
 
 wordsMouseInput = function() {
-  for (var i = 0; i<words.length; i++) {
-    words[i].onMousePressed = function() {
+  for (let i = 0; i<words.length; i++) {
+    words[i].wordBox.onMousePressed = function() {
       if (draggedSprite === null) {
-          draggedSprite = this;
+        //console.log(i);
+        draggedSprite = words[i].wordBox;
       }
     };
 
-    words[i].onMouseReleased = function() {
-      if (draggedSprite === this) {
+    words[i].wordBox.onMouseReleased = function() {
+      if (draggedSprite === words[i].wordBox) {
           draggedSprite = null;
         }
       };
@@ -49,18 +50,25 @@ function dragWord() {
 /****************************************************************************/
 
 function chooseWord() {
-  switch(listNum = floor(random(0,4))) {
-    case 0: chosenWord = conjunctionList[floor(random(0,conjunctionList.length))];
-            break;
-    case 1: chosenWord = determinerList[floor(random(0,determinerList.length))];
-            break;
-    case 2: chosenWord = prepositionList[floor(random(0,prepositionList.length))];
-            break;
-    case 3: chosenWord = pronounsList[floor(random(0,pronounsList.length))];
-            break;
-    case 4: chosenWord = punctuationList[floor(random(0,punctuationList.length))];
+  switch(listNum = floor(random(0,5))) {
+    case 0: {chosenWordObj = conjunctionList[floor(random(0,conjunctionList.length))];
+            chosenWord = chosenWordObj.conjunction;
+            break;}
+    case 1: {chosenWordObj = determinerList[floor(random(0,determinerList.length))];
+            chosenWord = chosenWordObj.determiner;
+            break;}
+    case 2: {chosenWordObj = prepositionList[floor(random(0,prepositionList.length))];
+            chosenWord = chosenWordObj.preposition;
+            break;}
+    case 3: {chosenWordObj = pronounsList[floor(random(0,pronounsList.length))];
+            chosenWord = chosenWordObj.pronoun;
+            break;}
+    case 4: {chosenWordObj = punctuationList[floor(random(0,punctuationList.length))];
+            chosenWord = chosenWordObj.punctuation;
+            break;}
   }
   console.log(listNum,chosenWord);
+  return chosenWord;
 }
 
 /****************************************************************************/
@@ -69,12 +77,24 @@ function chooseWord() {
 
 // a handy function that preloads all the word lists
 function preloadWordLists() {
-  conjunctionList = loadJSON("jsonFiles/conjunctions.json");
-  determinerList = loadJSON("jsonFiles/determiners.json");
-  prepositionList = loadJSON("jsonFiles/prepositions.json");
-  pronounsList = loadJSON("jsonFiles/pronouns.json");
-  punctuationList = loadJSON("jsonFiles/punctuation.json");
+  conjunctionListRaw = loadJSON("jsonFiles/conjunctions.json");
+  determinerListRaw = loadJSON("jsonFiles/determiners.json");
+  prepositionListRaw = loadJSON("jsonFiles/prepositions.json");
+  pronounsListRaw = loadJSON("jsonFiles/pronouns.json");
+  punctuationListRaw = loadJSON("jsonFiles/punctuation.json");
 }
+
+/****************************************************************************/
+                            //CONVERT JSON TO ARRAY
+/****************************************************************************/
+function convertToArray() {
+  conjunctionList = conjunctionListRaw.conjunctionArray;
+  determinerList = determinerListRaw.determinerArray;
+  prepositionList = prepositionListRaw.prepositionArray;
+  pronounsList = pronounsListRaw.pronounsArray;
+  punctuationList = punctuationListRaw.punctuationArray;
+}
+
 
 /****************************************************************************/
                                 //END

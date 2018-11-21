@@ -38,7 +38,8 @@ Button.prototype.buttonFunction = function() {
   if (this.text === "New Word" && buttonDistance < this.w/2 && buttonDistance < this.h/2) {
     if (mouseWentDown() === true && extraWordCount < 5) {
       console.log("clicked");
-      words.push(createSprite(random(poemCanvasLeft+50,poemCanvasRight-50),random(poemCanvasTop+15,poemCanvasBottom-15),100,30));
+      let chosenWord = chooseWord();
+      words.push(new Magnet(random(poemCanvasLeft+50,poemCanvasRight-50),random(poemCanvasTop+15,poemCanvasBottom-15),100,30,this.wordBox,chosenWord));
       extraWordCount = extraWordCount + 1;
     }
   }

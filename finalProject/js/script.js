@@ -29,11 +29,18 @@ var buttonDistance; //calculates distance between mouse and button
 var wordButton; // variable for the button that generates a new word
 
 // JSON VARIABLES
-var conjunctionList;
-var determinerList;
-var prepositionList;
-var pronounsList;
-var punctuationList;
+var conjunctionListRaw;
+var determinerListRaw;
+var prepositionListRaw;
+var pronounsListRaw;
+var punctuationListRaw;
+
+// ARRAY VARIABLES
+var conjunctionList = [];
+var determinerList = [];
+var prepositionList = [];
+var pronounsList = [];
+var punctuationList = [];
 
 //POEM CANVAS SHORTCUT VARIABLES
 var poemCanvasLeft;
@@ -54,6 +61,8 @@ function preload() {
 /****************************************************************************/
 
 function setup() {
+  convertToArray();
+  console.log(conjunctionList.length);
   createCanvas(800,800);
   poemCanvas = new PoemWindow(width/2,height/2,600,height/2);
   updateCanvasVariables();
@@ -73,10 +82,10 @@ function draw() {
   wordButton.display();
   wordButton.buttonFunction();
 
-
   wordsMouseInput();
   dragWord();
   drawSprites();
+  magnetsDraw();
 }
 
 

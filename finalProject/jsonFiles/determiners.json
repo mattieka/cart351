@@ -1,14 +1,16 @@
-[
-  {"determiner": "a"},
-  {"determiner": "an"},
-  {"determiner": "the"},
-  {"determiner": "every"},
-  {"determiner": "this"},
-  {"determiner": "those"},
-  {"determiner": "many"},
-  {"determiner": "this"},
-  {"determiner": "those"},
-  {"determiner": "every"},
-  {"determiner": "another"},
-  {"determiner": "first"}
-]
+{"determinerArray":
+  [
+    {"determiner": "a"},
+    {"determiner": "an"},
+    {"determiner": "the"},
+    {"determiner": "every"},
+    {"determiner": "this"},
+    {"determiner": "those"},
+    {"determiner": "many"},
+    {"determiner": "this"},
+    {"determiner": "those"},
+    {"determiner": "every"},
+    {"determiner": "another"},
+    {"determiner": "first"}
+  ]
+}
