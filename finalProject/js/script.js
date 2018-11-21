@@ -23,6 +23,7 @@ var words = []; // array that stores displayed words
 var listNum; //variable that stores a number that refers to a word list
 var chosenWord; //variable that stores a word from JSON selected by the chooseWord function
 var extraWordCount = 0 // variable that keeps count of extra words
+var wordSprites; //variable for the group of all displayed words
 
 // BUTTON RELATED VARIABLES
 var buttonDistance; //calculates distance between mouse and button

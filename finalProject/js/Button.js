@@ -41,6 +41,7 @@ Button.prototype.buttonFunction = function() {
       let chosenWord = chooseWord();
       words.push(new Magnet(random(poemCanvasLeft+50,poemCanvasRight-50),random(poemCanvasTop+15,poemCanvasBottom-15),100,30,this.wordBox,chosenWord));
       extraWordCount = extraWordCount + 1;
+      console.log("number of sprites: "+wordSprites.length);
     }
   }
 }

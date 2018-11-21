@@ -7,9 +7,11 @@
 /****************************************************************************/
 
 function wordsSetup() {
+  wordSprites = new Group;
   for (var i = 0; i < 1; i++) {
     let chosenWord = chooseWord();
     words.push(new Magnet(width/2,height/2,100,30,this.wordBox,chosenWord));
+    
   };
 }
 

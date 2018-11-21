@@ -13,11 +13,16 @@ function Magnet(x,y,w,h,wordBox,word) {
   this.h = h;
   this.wordBox = createSprite(this.x,this.y,this.w,this.h);
   this.word = word;
+  wordSprites.add(this.wordBox);
 
   this.displayWord = function() {
     textSettings();
     text(this.word,this.wordBox.position.x,this.wordBox.position.y+this.h/5);
   };
+
+  this.wordCollision = function() {
+    this.wordBox.collide(wordSprites);
+  }
 }
 
 /****************************************************************************/
@@ -27,6 +32,7 @@ function Magnet(x,y,w,h,wordBox,word) {
 function magnetsDraw() {
   for (let i = 0; i<words.length; i++) {
     words[i].displayWord();
+    words[i].wordCollision();
   }
 }
 
