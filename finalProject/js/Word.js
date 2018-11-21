@@ -38,8 +38,8 @@ wordsMouseInput = function() {
 
 function dragWord() {
   if (draggedSprite !== null) {
-    draggedSprite.position.x = mouseX;
-    draggedSprite.position.y = mouseY;
+    draggedSprite.position.x = constrain(mouseX,poemCanvasLeft+draggedSprite.width/2,poemCanvasRight+draggedSprite.width/2);
+    draggedSprite.position.y = constrain(mouseY,poemCanvasTop+draggedSprite.height/2,poemCanvasBottom-draggedSprite.height/2);
   }
 }
 
@@ -47,7 +47,7 @@ function dragWord() {
                             //JSON PRELOAD
 /****************************************************************************/
 
-// a handy function that preloads all the word lists 
+// a handy function that preloads all the word lists
 function preloadWordLists() {
   conjunctionList = loadJSON("jsonFiles/conjunctions.json");
   determinerList = loadJSON("jsonFiles/determiners.json");
