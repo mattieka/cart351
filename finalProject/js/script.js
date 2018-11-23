@@ -42,6 +42,7 @@ var determinerList = [];
 var prepositionList = [];
 var pronounsList = [];
 var punctuationList = [];
+var mainWordList = [];
 
 //POEM CANVAS SHORTCUT VARIABLES
 var poemCanvasLeft;

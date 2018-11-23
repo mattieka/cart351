@@ -11,7 +11,7 @@ function wordsSetup() {
   for (var i = 0; i < 1; i++) {
     let chosenWord = chooseWord();
     words.push(new Magnet(width/2,height/2,100,30,this.wordBox,chosenWord));
-    
+
   };
 }
 
@@ -44,6 +44,7 @@ function dragWord() {
   if (draggedSprite !== null) {
     draggedSprite.position.x = constrain(mouseX,poemCanvasLeft+draggedSprite.width/2,poemCanvasRight+draggedSprite.width/2);
     draggedSprite.position.y = constrain(mouseY,poemCanvasTop+draggedSprite.height/2,poemCanvasBottom-draggedSprite.height/2);
+    draggedSprite.collide(wordSprites);
   }
 }
 
@@ -52,7 +53,7 @@ function dragWord() {
 /****************************************************************************/
 
 function chooseWord() {
-  switch(listNum = floor(random(0,5))) {
+  switch(listNum = floor(random(0,6))) {
     case 0: {chosenWordObj = conjunctionList[floor(random(0,conjunctionList.length))];
             chosenWord = chosenWordObj.conjunction;
             break;}
@@ -67,6 +68,9 @@ function chooseWord() {
             break;}
     case 4: {chosenWordObj = punctuationList[floor(random(0,punctuationList.length))];
             chosenWord = chosenWordObj.punctuation;
+            break;}
+    case 5: {chosenWordObj = mainWordList[floor(random(0,mainWordList.length))];
+            chosenWord = chosenWordObj;
             break;}
   }
   console.log(listNum,chosenWord);
@@ -84,6 +88,7 @@ function preloadWordLists() {
   prepositionListRaw = loadJSON("jsonFiles/prepositions.json");
   pronounsListRaw = loadJSON("jsonFiles/pronouns.json");
   punctuationListRaw = loadJSON("jsonFiles/punctuation.json");
+  mainWordList = loadStrings("jsonFiles/2of5core.txt");
 }
 
 /****************************************************************************/

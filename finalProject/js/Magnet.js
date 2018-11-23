@@ -22,6 +22,7 @@ function Magnet(x,y,w,h,wordBox,word) {
 
   this.wordCollision = function() {
     this.wordBox.collide(wordSprites);
+    console.log("number of sprites at collision: "+wordSprites.length)
   }
 }
 
@@ -32,7 +33,6 @@ function Magnet(x,y,w,h,wordBox,word) {
 function magnetsDraw() {
   for (let i = 0; i<words.length; i++) {
     words[i].displayWord();
-    words[i].wordCollision();
   }
 }
 
