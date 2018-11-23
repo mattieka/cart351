@@ -78,6 +78,27 @@ function chooseWord() {
 }
 
 /****************************************************************************/
+                        //RANDOMLY SELECT PARTICLE
+/****************************************************************************/
+
+function chooseParticle() {
+  switch(listNum = floor(random(0,4))) {
+    case 0: {chosenWordObj = conjunctionList[floor(random(0,conjunctionList.length))];
+            chosenWord = chosenWordObj.conjunction;
+            break;}
+    case 1: {chosenWordObj = determinerList[floor(random(0,determinerList.length))];
+            chosenWord = chosenWordObj.determiner;
+            break;}
+    case 2: {chosenWordObj = prepositionList[floor(random(0,prepositionList.length))];
+            chosenWord = chosenWordObj.preposition;
+            break;}
+    case 3: {chosenWordObj = pronounsList[floor(random(0,pronounsList.length))];
+            chosenWord = chosenWordObj.pronoun;
+            break;}
+  }
+}
+
+/****************************************************************************/
                             //JSON PRELOAD
 /****************************************************************************/
 

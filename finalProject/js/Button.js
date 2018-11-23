@@ -45,6 +45,14 @@ Button.prototype.buttonFunction = function() {
       console.log("number of words: "+words.length);
     }
   }
+
+  if (this.text === "New Particle" && buttonDistance < this.w/2 && buttonDistance < this.h/2) {
+    if (mouseWentDown() === true && extraWordCount < 5) {
+      let chosenWord = chooseParticle();
+      words.push(new Magnet(random(poemCanvasLeft+50,poemCanvasRight-50),random(poemCanvasTop+15,poemCanvasBottom-15),100,30,this.wordBox,chosenWord));
+      extraWordCount = extraWordCount + 1;
+    }
+  }
 }
 
 /****************************************************************************/

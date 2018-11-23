@@ -28,6 +28,7 @@ var wordSprites; //variable for the group of all displayed words
 // BUTTON RELATED VARIABLES
 var buttonDistance; //calculates distance between mouse and button
 var wordButton; // variable for the button that generates a new word
+var particleButton;
 
 // JSON VARIABLES
 var conjunctionListRaw;
@@ -72,7 +73,7 @@ function setup() {
 
   // create onscreen buttons
   wordButton = new Button(poemCanvasLeft+50,poemCanvasBottom+25,100,50,"New Word","Word Button");
-
+  particleButton = new Button(poemCanvasLeft+150,poemCanvasBottom+25,100,50,"New Particle","Word Button");
 }
 /****************************************************************************/
                                 //DRAW
