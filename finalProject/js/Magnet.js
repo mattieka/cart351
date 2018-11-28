@@ -10,14 +10,13 @@ function Magnet(x,y,w,h,wordBox,word,magnetColor) {
   this.x = x;
   this.y = y;
   this.word = word;
-  this.w = this.word.length * 15;
+  this.w = this.word.length * 13.2
   this.h = h;
   this.wordBox = createSprite(this.x,this.y,this.w,this.h);
 
   this.wordBox.shapeColor = magnetRandomColour();
   wordSprites.add(this.wordBox);
   console.log(this.word);
-
 
   this.displayWord = function() {
     textSettings();
@@ -27,7 +26,7 @@ function Magnet(x,y,w,h,wordBox,word,magnetColor) {
   this.wordCollision = function() {
     this.wordBox.collide(wordSprites);
     console.log("number of sprites at collision: "+wordSprites.length)
-  }
+  };
 }
 
 /****************************************************************************/

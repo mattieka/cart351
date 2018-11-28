@@ -33,7 +33,6 @@ var buttonDistance; //calculates distance between mouse and button
 var magnetColor;
 var wordButton; // variable for the button that generates a new word
 var particleButton;
-var addSButton;
 var wordEndingsButton;
 var wordEndingButtonsState = "off";
 
@@ -95,16 +94,16 @@ function setup() {
   //addSButton = new Button(poemCanvasLeft+270,poemCanvasBottom+25,100,50,"Add 'S'","S Button");
   wordEndingsButton = new Button(poemCanvasLeft+270,poemCanvasBottom+25,100,50,"Word Endings","Word Button");
 
-  allWordEndingButtons.push (new Button(poemCanvas+270,poemCanvasBottom+25,100,50,"-ly","Ending Button"));
-  allWordEndingButtons.push (new Button(poemCanvas+270,poemCanvasBottom+25,100,50,"-s","Ending Button"));
-  allWordEndingButtons.push (new Button(poemCanvas+270,poemCanvasBottom+25,100,50,"-ing","Ending Button"));
-  allWordEndingButtons.push (new Button(poemCanvas+270,poemCanvasBottom+25,100,50,"-ed","Ending Button"));
-  allWordEndingButtons.push (new Button(poemCanvas+270,poemCanvasBottom+25,100,50,"-es","Ending Button"));
-  allWordEndingButtons.push (new Button(poemCanvas+270,poemCanvasBottom+25,100,50,"-d","Ending Button"));
-  allWordEndingButtons.push (new Button(poemCanvas+270,poemCanvasBottom+25,100,50,"-er","Ending Button"));
-  allWordEndingButtons.push (new Button(poemCanvas+270,poemCanvasBottom+25,100,50,"-ier","Ending Button"));
-  allWordEndingButtons.push (new Button(poemCanvas+270,poemCanvasBottom+25,100,50,"-y","Ending Button"));
-  allWordEndingButtons.push (new Button(poemCanvas+270,poemCanvasBottom+25,100,50,"-en","Ending Button"));
+  allWordEndingButtons.push (new Button(poemCanvasLeft+270,poemCanvasBottom+25,100,50,"ly","Ending Button"));
+  allWordEndingButtons.push (new Button(poemCanvasLeft+270,poemCanvasBottom+25,100,50,"s","Ending Button"));
+  allWordEndingButtons.push (new Button(poemCanvasLeft+270,poemCanvasBottom+25,100,50,"ing","Ending Button"));
+  allWordEndingButtons.push (new Button(poemCanvasLeft+270,poemCanvasBottom+25,100,50,"ed","Ending Button"));
+  allWordEndingButtons.push (new Button(poemCanvasLeft+270,poemCanvasBottom+25,100,50,"es","Ending Button"));
+  allWordEndingButtons.push (new Button(poemCanvasLeft+270,poemCanvasBottom+25,100,50,"d","Ending Button"));
+  allWordEndingButtons.push (new Button(poemCanvasLeft+270,poemCanvasBottom+25,100,50,"er","Ending Button"));
+  allWordEndingButtons.push (new Button(poemCanvasLeft+270,poemCanvasBottom+25,100,50,"ier","Ending Button"));
+  allWordEndingButtons.push (new Button(poemCanvasLeft+270,poemCanvasBottom+25,100,50,"y","Ending Button"));
+  allWordEndingButtons.push (new Button(poemCanvasLeft+270,poemCanvasBottom+25,100,50,"en","Ending Button"));
 
 
 }
@@ -124,8 +123,12 @@ function draw() {
   particleButton.display();
   particleButton.buttonFunction();
 
+  checkWordEndingButtonState();
+
   wordEndingsButton.display();
   wordEndingsButton.buttonFunction();
+
+  allWordEndingButtons[endingButtonIndex].buttonFunction();
 
   wordsMouseInput();
   dragWord();
@@ -156,6 +159,6 @@ function poemCanvasRandomXY() {
 
 function magnetRandomColour() {
     colorMode(HSB);
-    magnetColor = color(random(0,255),random(0,90),random(90,100));
+    magnetColor = color(random(0,255),random(20,60),random(90,100));
     return magnetColor;
 }

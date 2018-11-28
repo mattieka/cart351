@@ -59,32 +59,72 @@ Button.prototype.buttonFunction = function() {
     }
   }
 
-  if (this.text === "Word Endings" && this.w/2 && buttonDistance < this.h/2) {
+  if (this.text === "Word Endings" && buttonDistance < this.w/2 && buttonDistance < this.h/2) {
     if (mouseWentDown() === true) {
-      if(endingButtonIndex==allWordEndingButtons.length-1){
-        endingButtonIndex =0;
+      if (endingButtonIndex === 0 && wordEndingButtonsState === "off") {
+        wordEndingButtonsState = "on";
+        allWordEndingButtons[endingButtonIndex].y = this.y + 60;
       }
-      else {
-        endingButtonIndex++;
+      else if (endingButtonIndex === 0 && wordEndingButtonsState === "on") {
+        endingButtonIndex = endingButtonIndex + 1;
+        allWordEndingButtons[endingButtonIndex].y = this.y + 60;
       }
-     showWordEndingButtons();
+      else if (endingButtonIndex > 0 && endingButtonIndex < allWordEndingButtons.length-1){
+        endingButtonIndex = endingButtonIndex + 1;
+        allWordEndingButtons[endingButtonIndex].y = this.y + 60;
+      }
+      else if (endingButtonIndex === allWordEndingButtons.length-1){
+        wordEndingButtonsState = "off";
+        endingButtonIndex = endingButtonIndex + 1;
+        endingButtonIndex = 0;
+      }
+      console.log(allWordEndingButtons[endingButtonIndex]);
+      console.log(endingButtonIndex);
     }
+  }
+
+  if (this.type === "Ending Button" && buttonDistance < this.w/2 && buttonDistance < this.h/2) {
+    if (mouseWentDown() === true) {
+      console.log("clicked");
+      poemCanvasRandomXY();
+      words.push(new Magnet(poemCanvasRandomX,poemCanvasRandomY,100,30,this.wordBox,this.text));
+
+    }
+  }
+
+}
+
+/****************************************************************************/
+                    //CHECK WORD ENDING BUTTON STATE
+/****************************************************************************/
+
+function checkWordEndingButtonState() {
+  if (wordEndingButtonsState === "on") {
+    showWordEndingButtons();
+  }
+
+  if (wordEndingButtonsState === "off") {
+    hideWordEndingButtons();
   }
 }
 
+/****************************************************************************/
+                        //SHOW WORD ENDING BUTTON
+/****************************************************************************/
+
 function showWordEndingButtons() {
-
-  console.log(endingButtonIndex);
-  allWordEndingButtons[endingButtonIndex];
-  /* i wanna
-  - have extra buttons behind original
-  - have the first one slide up to its position, cycle thru them by clicking
-    on the first button
-  */
-
+  //allWordEndingButtons[endingButtonIndex-1].y = wordEndingsButton.y;
+  allWordEndingButtons[endingButtonIndex].display();
 }
 
+/****************************************************************************/
+                        //HIDE WORD ENDING BUTTON
+/****************************************************************************/
 
+function hideWordEndingButtons() {
+  endingButtonIndex = 0;
+  allWordEndingButtons.y = wordEndingsButton.y;
+}
 
 /****************************************************************************/
                                 //NOTES
