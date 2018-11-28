@@ -24,6 +24,9 @@ poem canvas stuff to do
 - ***DONE!*** make word subdivisions (nouns, adjectives, etc)
 - make different buttons for each word subdivision
 - let user post/save their poem (take screenshot and upload/download it?)
+- trash can to get rid of words
+- limit amount of word endings?? or not, could be funny
+- allow word endings to overlap 
 
 gallery stuff to do
 - display user poems
