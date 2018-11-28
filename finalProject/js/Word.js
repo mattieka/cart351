@@ -156,7 +156,7 @@ function preloadWordLists() {
   prepositionListRaw = loadJSON("jsonFiles/prepositions.json");
   pronounsListRaw = loadJSON("jsonFiles/pronouns.json");
   punctuationListRaw = loadJSON("jsonFiles/punctuation.json");
-  mainWordList = loadStrings("jsonFiles/2of5core.txt");
+  mainWordList = loadStrings("jsonFiles/coreList.txt");
   profanityListRaw = loadJSON("jsonFiles/profanity.json");
   popCultureListRaw = loadJSON("jsonFiles/popculture.json");
   slangListRaw = loadJSON("jsonFiles/slang.json");
@@ -172,7 +172,6 @@ function convertToArray() {
   pronounsList = pronounsListRaw.pronounsArray;
   punctuationList = punctuationListRaw.punctuationArray;
   profanityList = profanityListRaw.profanityArray;
-  console.log(profanityList);
   popCultureList = popCultureListRaw.popcultureArray;
   slangList = slangListRaw.slangArray;
 }
