@@ -8,10 +8,11 @@
 
 function wordsSetup() {
   wordSprites = new Group;
-  for (var i = 0; i < 1; i++) {
-    let chosenWord = chooseWord();
-    words.push(new Magnet(width/2,height/2,100,30,this.wordBox,chosenWord));
-
+  for (var i = 0; i < 9; i++) {
+    let chosenWord = startingWords();
+    poemCanvasRandomXY();
+    //let chosenWord = chooseWord();
+    words.push(new Magnet(poemCanvasRandomX,poemCanvasRandomY,100,30,this.wordBox,chosenWord));
   };
 }
 
@@ -49,7 +50,32 @@ function dragWord() {
 }
 
 /****************************************************************************/
-                        //RANDOMLY SELECT WORD LIST
+                            //STARTING WORDS
+/****************************************************************************/
+/* randomly chooses 5 words from the main word list, 3 particles, and 1
+word from either profanity, slang, or pop culture */
+
+function startingWords() {
+  if (startCoreWordCount < 5) {
+    chosenWordObj = mainWordList[round(random(0,mainWordList.length))];
+    chosenWord = chosenWordObj;
+    startCoreWordCount = startCoreWordCount + 1;
+    return chosenWord;
+  }
+    else if (startCoreWordCount === 5 && startParticleCount < 3) {
+      chosenWord = chooseParticle();
+      startParticleCount = startParticleCount + 1;
+      return chosenWord;
+    }
+      else if (startCoreWordCount === 5 && startParticleCount === 3 && startSpecialCount < 1) {
+        chosenWord = chooseSpecial();
+        startSpecialCount = startSpecialCount + 1;
+        return chosenWord;
+      }
+}
+
+/****************************************************************************/
+                //RANDOMLY SELECT WORD FROM RANDOM WORD LIST
 /****************************************************************************/
 
 function chooseWord() {
@@ -96,6 +122,27 @@ function chooseParticle() {
             chosenWord = chosenWordObj.pronoun;
             break;}
   }
+  return chosenWord;
+}
+
+/****************************************************************************/
+                        //RANDOMLY SELECT SPECIAL
+                    //(profanity/pop culture/slang)
+/****************************************************************************/
+
+function chooseSpecial() {
+  switch(listNum = floor(random(0,3))) {
+    case 0: {chosenWordObj = profanityList[floor(random(0,profanityList.length))];
+      chosenWord = chosenWordObj.profanity;
+      break;}
+    case 1: {chosenWordObj = popCultureList[floor(random(0,popCultureList.length))];
+      chosenWord = chosenWordObj.popculture;
+      break;}
+    case 2: {chosenWordObj = slangList[floor(random(0,slangList.length))];
+      chosenWord = chosenWordObj.slang;
+      break;}
+  }
+  return chosenWord;
 }
 
 /****************************************************************************/
@@ -110,10 +157,13 @@ function preloadWordLists() {
   pronounsListRaw = loadJSON("jsonFiles/pronouns.json");
   punctuationListRaw = loadJSON("jsonFiles/punctuation.json");
   mainWordList = loadStrings("jsonFiles/2of5core.txt");
+  profanityListRaw = loadJSON("jsonFiles/profanity.json");
+  popCultureListRaw = loadJSON("jsonFiles/popculture.json");
+  slangListRaw = loadJSON("jsonFiles/slang.json");
 }
 
 /****************************************************************************/
-                            //CONVERT JSON TO ARRAY
+                        //CONVERT JSON TO ARRAY
 /****************************************************************************/
 function convertToArray() {
   conjunctionList = conjunctionListRaw.conjunctionArray;
@@ -121,6 +171,10 @@ function convertToArray() {
   prepositionList = prepositionListRaw.prepositionArray;
   pronounsList = pronounsListRaw.pronounsArray;
   punctuationList = punctuationListRaw.punctuationArray;
+  profanityList = profanityListRaw.profanityArray;
+  console.log(profanityList);
+  popCultureList = popCultureListRaw.popcultureArray;
+  slangList = slangListRaw.slangArray;
 }
 
 

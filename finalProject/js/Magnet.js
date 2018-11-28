@@ -6,14 +6,18 @@
                               //CONSTRUCTOR
 /****************************************************************************/
 
-function Magnet(x,y,w,h,wordBox,word) {
+function Magnet(x,y,w,h,wordBox,word,magnetColor) {
   this.x = x;
   this.y = y;
-  this.w = w;
+  this.word = word;
+  this.w = this.word.length * 15;
   this.h = h;
   this.wordBox = createSprite(this.x,this.y,this.w,this.h);
-  this.word = word;
+
+  this.wordBox.shapeColor = magnetRandomColour();
   wordSprites.add(this.wordBox);
+  console.log(this.word);
+
 
   this.displayWord = function() {
     textSettings();

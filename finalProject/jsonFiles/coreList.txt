@@ -1,4 +1,3 @@
-a
 abandon
 abandoned
 ability
@@ -72,7 +71,6 @@ adopt
 adoption
 adult
 advance
-advanced
 advantage
 adventure
 adverb
@@ -94,7 +92,6 @@ afterwards
 again
 against
 age
-aged
 agency
 agenda
 agent
@@ -147,7 +144,6 @@ altogether
 always
 a.m.
 amaze
-amazed
 amazing
 ambassador
 ambition
@@ -157,7 +153,6 @@ amid
 among
 amount
 amuse
-amused
 amusement
 an
 analysis
@@ -176,7 +171,6 @@ anniversary
 announce
 announcement
 annoy
-annoyed
 annoying
 annual
 another
@@ -226,10 +220,6 @@ argument
 arise
 arm
 armchair
-armed
-arms
-army
-around
 arrange
 arrangement
 arrest
@@ -239,10 +229,8 @@ arrow
 art
 article
 artificial
-artificially
 artist
 artistic
-as
 ascend
 ashamed
 aside
@@ -260,26 +248,21 @@ assist
 assistance
 assistant
 associate
-associated
 association
 assume
 assumption
 assure
-astonished
-astonishing
+astonish
 astonishment
-at
 athlete
 athletic
 atmosphere
 atom
 atomic
 attach
-attached
 attachment
 attack
 attempt
-attempted
 attend
 attention
 attitude
@@ -351,7 +334,6 @@ barrel
 barrier
 base
 baseball
-based
 basement
 basic
 basically
@@ -464,8 +446,6 @@ boost
 boot
 border
 bore
-bored
-boring
 born
 borrow
 boss
@@ -725,8 +705,6 @@ clinic
 cloak
 clock
 close
-closed
-closely
 closet
 cloth
 clothes

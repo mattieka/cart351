@@ -13,6 +13,7 @@ function Button(x,y,w,h,text,type) {
   this.h = h;
   this.text = text;
   this.type = type;
+
 }
 
 /****************************************************************************/
@@ -29,6 +30,8 @@ Button.prototype.display = function() {
   text(this.text,this.x,this.y);
 }
 
+
+
 /****************************************************************************/
         //BUTTON FUNCTION FUNCTION (makes button do what its meant to)
 /****************************************************************************/
@@ -39,7 +42,8 @@ Button.prototype.buttonFunction = function() {
     if (mouseWentDown() === true && extraWordCount < 5) {
       console.log("clicked");
       let chosenWord = chooseWord();
-      words.push(new Magnet(random(poemCanvasLeft+50,poemCanvasRight-50),random(poemCanvasTop+15,poemCanvasBottom-15),100,30,this.wordBox,chosenWord));
+      poemCanvasRandomXY();
+      words.push(new Magnet(poemCanvasRandomX,poemCanvasRandomY,100,30,this.wordBox,chosenWord));
       extraWordCount = extraWordCount + 1;
       console.log("number of sprites: "+wordSprites.length);
       console.log("number of words: "+words.length);
@@ -49,11 +53,38 @@ Button.prototype.buttonFunction = function() {
   if (this.text === "New Particle" && buttonDistance < this.w/2 && buttonDistance < this.h/2) {
     if (mouseWentDown() === true && extraWordCount < 5) {
       let chosenWord = chooseParticle();
-      words.push(new Magnet(random(poemCanvasLeft+50,poemCanvasRight-50),random(poemCanvasTop+15,poemCanvasBottom-15),100,30,this.wordBox,chosenWord));
+      poemCanvasRandomXY();
+      words.push(new Magnet(poemCanvasRandomX,poemCanvasRandomY,100,30,this.wordBox,chosenWord));
       extraWordCount = extraWordCount + 1;
     }
   }
+
+  if (this.text === "Word Endings" && this.w/2 && buttonDistance < this.h/2) {
+    if (mouseWentDown() === true) {
+      if(endingButtonIndex==allWordEndingButtons.length-1){
+        endingButtonIndex =0;
+      }
+      else {
+        endingButtonIndex++;
+      }
+     showWordEndingButtons();
+    }
+  }
 }
+
+function showWordEndingButtons() {
+
+  console.log(endingButtonIndex);
+  allWordEndingButtons[endingButtonIndex];
+  /* i wanna
+  - have extra buttons behind original
+  - have the first one slide up to its position, cycle thru them by clicking
+    on the first button
+  */
+
+}
+
+
 
 /****************************************************************************/
                                 //NOTES
@@ -71,6 +102,20 @@ Word generation:
   - conjunction
   - determiner
   - punctuation
+
+Word Endings:
+  - s
+  - ly
+  - ing
+  - ed
+  - es
+  - d
+  - er
+  - ier
+  - y
+  - en
+
+ **ALLOW THESE GUYS TO OVERLAP??**
 
 */
 /****************************************************************************/

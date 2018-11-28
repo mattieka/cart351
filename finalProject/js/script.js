@@ -24,11 +24,18 @@ var listNum; //variable that stores a number that refers to a word list
 var chosenWord; //variable that stores a word from JSON selected by the chooseWord function
 var extraWordCount = 0 // variable that keeps count of extra words
 var wordSprites; //variable for the group of all displayed words
+var startCoreWordCount = 0;
+var startParticleCount = 0;
+var startSpecialCount = 0;
 
 // BUTTON RELATED VARIABLES
 var buttonDistance; //calculates distance between mouse and button
+var magnetColor;
 var wordButton; // variable for the button that generates a new word
 var particleButton;
+var addSButton;
+var wordEndingsButton;
+var wordEndingButtonsState = "off";
 
 // JSON VARIABLES
 var conjunctionListRaw;
@@ -36,6 +43,9 @@ var determinerListRaw;
 var prepositionListRaw;
 var pronounsListRaw;
 var punctuationListRaw;
+var profanityListRaw;
+var popCultureListRaw;
+var slangListRaw;
 
 // ARRAY VARIABLES
 var conjunctionList = [];
@@ -44,12 +54,20 @@ var prepositionList = [];
 var pronounsList = [];
 var punctuationList = [];
 var mainWordList = [];
+var profanityList = [];
+var popCultureList = [];
+var slangList = [];
+var allWordEndingButtons = [];
 
 //POEM CANVAS SHORTCUT VARIABLES
 var poemCanvasLeft;
 var poemCanvasRight;
 var poemCanvasTop;
 var poemCanvasBottom;
+var poemCanvasRandomX;
+var poemCanvasRandomY;
+
+var endingButtonIndex =0;
 
 /****************************************************************************/
                               //PRELOAD
@@ -65,7 +83,7 @@ function preload() {
 
 function setup() {
   convertToArray();
-  console.log(conjunctionList.length);
+  //console.log(conjunctionList.length);
   createCanvas(800,800);
   poemCanvas = new PoemWindow(width/2,height/2,600,height/2);
   updateCanvasVariables();
@@ -73,7 +91,22 @@ function setup() {
 
   // create onscreen buttons
   wordButton = new Button(poemCanvasLeft+50,poemCanvasBottom+25,100,50,"New Word","Word Button");
-  particleButton = new Button(poemCanvasLeft+150,poemCanvasBottom+25,100,50,"New Particle","Word Button");
+  particleButton = new Button(poemCanvasLeft+160,poemCanvasBottom+25,100,50,"New Particle","Word Button");
+  //addSButton = new Button(poemCanvasLeft+270,poemCanvasBottom+25,100,50,"Add 'S'","S Button");
+  wordEndingsButton = new Button(poemCanvasLeft+270,poemCanvasBottom+25,100,50,"Word Endings","Word Button");
+
+  allWordEndingButtons.push (new Button(poemCanvas+270,poemCanvasBottom+25,100,50,"-ly","Ending Button"));
+  allWordEndingButtons.push (new Button(poemCanvas+270,poemCanvasBottom+25,100,50,"-s","Ending Button"));
+  allWordEndingButtons.push (new Button(poemCanvas+270,poemCanvasBottom+25,100,50,"-ing","Ending Button"));
+  allWordEndingButtons.push (new Button(poemCanvas+270,poemCanvasBottom+25,100,50,"-ed","Ending Button"));
+  allWordEndingButtons.push (new Button(poemCanvas+270,poemCanvasBottom+25,100,50,"-es","Ending Button"));
+  allWordEndingButtons.push (new Button(poemCanvas+270,poemCanvasBottom+25,100,50,"-d","Ending Button"));
+  allWordEndingButtons.push (new Button(poemCanvas+270,poemCanvasBottom+25,100,50,"-er","Ending Button"));
+  allWordEndingButtons.push (new Button(poemCanvas+270,poemCanvasBottom+25,100,50,"-ier","Ending Button"));
+  allWordEndingButtons.push (new Button(poemCanvas+270,poemCanvasBottom+25,100,50,"-y","Ending Button"));
+  allWordEndingButtons.push (new Button(poemCanvas+270,poemCanvasBottom+25,100,50,"-en","Ending Button"));
+
+
 }
 /****************************************************************************/
                                 //DRAW
@@ -85,10 +118,21 @@ function draw() {
   wordButton.display();
   wordButton.buttonFunction();
 
+  // addSButton.display();
+  // addSButton.buttonFunction();
+
+  particleButton.display();
+  particleButton.buttonFunction();
+
+  wordEndingsButton.display();
+  wordEndingsButton.buttonFunction();
+
   wordsMouseInput();
   dragWord();
   drawSprites();
   magnetsDraw();
+
+
 }
 
 
@@ -102,4 +146,16 @@ function updateCanvasVariables() {
   poemCanvasRight = poemCanvas.w;
   poemCanvasTop = poemCanvas.y-poemCanvas.h/2;
   poemCanvasBottom = poemCanvasTop+poemCanvas.h;
+}
+
+// shortcut for random position on poem canvas
+function poemCanvasRandomXY() {
+  poemCanvasRandomX = random(poemCanvasLeft+50,poemCanvasRight-50);
+  poemCanvasRandomY = random(poemCanvasTop+15,poemCanvasBottom-15);
+}
+
+function magnetRandomColour() {
+    colorMode(HSB);
+    magnetColor = color(random(0,255),random(0,90),random(90,100));
+    return magnetColor;
 }
