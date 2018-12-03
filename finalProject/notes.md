@@ -38,5 +38,7 @@ homepage stuff to do
 collaborative function
 - make that. i dont know how to make that. i probably wont make that
 
+https://appendto.com/2016/04/javascript-redirect-how-to-redirect-a-web-page-with-javascript/
+
 
 ----------

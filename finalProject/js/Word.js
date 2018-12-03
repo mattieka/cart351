@@ -26,10 +26,16 @@ wordsMouseInput = function() {
       if (draggedSprite === null) {
         //console.log(i);
         draggedSprite = words[i].wordBox;
+        draggedWordIndex = i;
+        console.log(draggedWordIndex);
       }
     };
 
     words[i].wordBox.onMouseReleased = function() {
+      if (draggedSprite.overlap(trashCan)) {
+          draggedSprite.remove();
+          words[draggedWordIndex].word = "";
+      }
       if (draggedSprite === words[i].wordBox) {
           draggedSprite = null;
         }

@@ -17,6 +17,7 @@ var poemCanvas;
 
 // GENERAL SPRITE-RELATED VARIABLES
 var draggedSprite = null; //initialize variable of any sprite that can be dragged
+var draggedWordIndex = 0;
 
 // WORD-RELATED VARIABLES
 var words = []; // array that stores displayed words
