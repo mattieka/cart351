@@ -10,7 +10,7 @@ Bugs I've Noticed
 - **FIXED until i notice otherwise** comb through word lists for errors (words with variant   
   spellings are both displayed) and for words that could potentially be used for evil (the word Jewish is included and i know that /i/ won't use it for evil, but someone else might especially given the alarming amount of neonazi bastards on the internet. i dont want anyone to be hurt using my poem program)
 - **FIXED** plurals of words arent available. make a button that provides an "s"?
-- particle generation generates uh. a lot of useless things and not enough the/a/it
+- **FIXED** particle generation generates uh. a lot of useless things and not enough the/a/it
 - **FIXED** profanity words return undefined?? no cursing allowed i guess
 - a lot of particles show up in the core word list, comb thru list and eliminate them?? similarly, words have doubles with endings (ex: sand, sanded), get ride of those too? yeesh see yall in five years
 
@@ -26,7 +26,6 @@ poem canvas stuff to do
 - let user post/save their poem (take screenshot and upload/download it?)
 - trash can to get rid of words
 - limit amount of word endings?? or not, could be funny
-- allow word endings to overlap 
 
 gallery stuff to do
 - display user poems

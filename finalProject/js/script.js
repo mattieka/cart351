@@ -45,6 +45,7 @@ var punctuationListRaw;
 var profanityListRaw;
 var popCultureListRaw;
 var slangListRaw;
+var coreParticleListRaw;
 
 // ARRAY VARIABLES
 var conjunctionList = [];
@@ -57,6 +58,7 @@ var profanityList = [];
 var popCultureList = [];
 var slangList = [];
 var allWordEndingButtons = [];
+var coreParticleList = [];
 
 //POEM CANVAS SHORTCUT VARIABLES
 var poemCanvasLeft;
@@ -87,6 +89,7 @@ function setup() {
   poemCanvas = new PoemWindow(width/2,height/2,600,height/2);
   updateCanvasVariables();
   wordsSetup();
+  trashSetup();
 
   // create onscreen buttons
   wordButton = new Button(poemCanvasLeft+50,poemCanvasBottom+25,100,50,"New Word","Word Button");
@@ -146,7 +149,7 @@ function draw() {
 // for easy access
 function updateCanvasVariables() {
   poemCanvasLeft = poemCanvas.x-poemCanvas.w/2;
-  poemCanvasRight = poemCanvas.w;
+  poemCanvasRight = poemCanvasLeft+poemCanvas.w;
   poemCanvasTop = poemCanvas.y-poemCanvas.h/2;
   poemCanvasBottom = poemCanvasTop+poemCanvas.h;
 }

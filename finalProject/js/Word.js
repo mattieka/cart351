@@ -43,7 +43,7 @@ wordsMouseInput = function() {
 
 function dragWord() {
   if (draggedSprite !== null) {
-    draggedSprite.position.x = constrain(mouseX,poemCanvasLeft+draggedSprite.width/2,poemCanvasRight+draggedSprite.width/2);
+    draggedSprite.position.x = constrain(mouseX,poemCanvasLeft+draggedSprite.width/2,poemCanvasRight-draggedSprite.width/2);
     draggedSprite.position.y = constrain(mouseY,poemCanvasTop+draggedSprite.height/2,poemCanvasBottom-draggedSprite.height/2);
     draggedSprite.collide(wordSprites);
   }
@@ -63,7 +63,7 @@ function startingWords() {
     return chosenWord;
   }
     else if (startCoreWordCount === 5 && startParticleCount < 3) {
-      chosenWord = chooseParticle();
+      chosenWord = chooseCoreParticle();
       startParticleCount = startParticleCount + 1;
       return chosenWord;
     }
@@ -75,10 +75,21 @@ function startingWords() {
 }
 
 /****************************************************************************/
+                //RANDOMLY SELECT WORD FROM CORE LIST
+/****************************************************************************/
+
+
+function chooseWord() {
+  chosenWordObj = mainWordList[round(random(0,mainWordList.length))];
+  chosenWord = chosenWordObj;
+  return chosenWord;
+}
+
+/****************************************************************************/
                 //RANDOMLY SELECT WORD FROM RANDOM WORD LIST
 /****************************************************************************/
 
-function chooseWord() {
+function chooseRandomWord() {
   switch(listNum = floor(random(0,6))) {
     case 0: {chosenWordObj = conjunctionList[floor(random(0,conjunctionList.length))];
             chosenWord = chosenWordObj.conjunction;
@@ -100,6 +111,17 @@ function chooseWord() {
             break;}
   }
   console.log(listNum,chosenWord);
+  return chosenWord;
+}
+
+/****************************************************************************/
+                    //RANDOMLY SELECT CORE PARTICLE
+                  // generates more common particles
+/****************************************************************************/
+
+function chooseCoreParticle() {
+  chosenWordObj = coreParticleList[floor(random(0,coreParticleList.length))];
+  chosenWord = chosenWordObj.particle;
   return chosenWord;
 }
 
@@ -160,6 +182,7 @@ function preloadWordLists() {
   profanityListRaw = loadJSON("jsonFiles/profanity.json");
   popCultureListRaw = loadJSON("jsonFiles/popculture.json");
   slangListRaw = loadJSON("jsonFiles/slang.json");
+  coreParticleListRaw = loadJSON("jsonFiles/coreParticles.json");
 }
 
 /****************************************************************************/
@@ -174,6 +197,7 @@ function convertToArray() {
   profanityList = profanityListRaw.profanityArray;
   popCultureList = popCultureListRaw.popcultureArray;
   slangList = slangListRaw.slangArray;
+  coreParticleList = coreParticleListRaw.particleArray;
 }
 
 
