@@ -132,9 +132,13 @@ Button.prototype.buttonFunction = function() {
     }
   }
 
-  if (this.text === "Save Poem" && buttonDistance < this.w/2 && buttonDistance < this.h/2) {
+  if (this.text === "Upload Poem" && buttonDistance < this.w/2 && buttonDistance < this.h/2) {
     if (mouseWentDown() === true) {
-      savePoem();
+      let input = createInput();
+      input.position(this.x-this.w/2,poemCanvasTop+this.y+this.h);
+      let button = createButton('submit');
+      button.position(input.x + input.width + 10,input.y);
+      button.mousePressed(savePoem);
     }
   }
 

@@ -12,7 +12,7 @@ function savePoem() {
 
   let dataToSend = {
     base64data : poemImageData ,
-    filename : 
+    filename : filename;
   }
 
   /* make an ajax request to php -> to save image on the server */
