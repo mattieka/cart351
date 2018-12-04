@@ -26,6 +26,10 @@ a:visited {
   color: white;
 }
 
+#credits a {
+  color: purple;
+}
+
 /* TOP BAR NAVIGATION */
 
 #topBar{

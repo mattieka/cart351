@@ -7,7 +7,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
 
   //echo($img);
   $poemImageData = base64_decode($img);
-  file_put_contents('savedPoemFolder/filename.png', $poemImageData);
+  file_put_contents('savedPoemFolder/'+$fileNameData+'.png', $poemImageData);
   echo("done");
 }
 ?>

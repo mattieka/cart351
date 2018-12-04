@@ -39,7 +39,7 @@ Button.prototype.display = function() {
 Button.prototype.buttonFunction = function() {
   buttonDistance = dist(mouseX,mouseY,this.x,this.y);
   if (this.text === "New Word" && buttonDistance < this.w/2 && buttonDistance < this.h/2) {
-    if (mouseWentDown() === true && extraWordCount < 5) {
+    if (mouseWentDown() === true) {
       console.log("clicked");
       let chosenWord = chooseWord();
       poemCanvasRandomXY();
@@ -51,7 +51,7 @@ Button.prototype.buttonFunction = function() {
   }
 
   if (this.text === "New Particle" && buttonDistance < this.w/2 && buttonDistance < this.h/2) {
-    if (mouseWentDown() === true && extraWordCount < 5) {
+    if (mouseWentDown() === true) {
       let chosenWord = chooseParticle();
       poemCanvasRandomXY();
       words.push(new Magnet(poemCanvasRandomX,poemCanvasRandomY,100,30,this.wordBox,chosenWord));
@@ -138,6 +138,7 @@ Button.prototype.buttonFunction = function() {
       input.position(this.x-this.w/2,poemCanvasTop+this.y+this.h);
       let button = createButton('submit');
       button.position(input.x + input.width + 10,input.y);
+      filename = input.value()
       button.mousePressed(savePoem);
     }
   }

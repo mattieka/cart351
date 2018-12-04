@@ -25,9 +25,8 @@ poem canvas stuff to do
 - ***DONE!*** make word subdivisions (nouns, adjectives, etc)
 - make different buttons for each word subdivision
 - let user post/save their poem (take screenshot and upload/download it?)
-- trash can to get rid of words
-- limit amount of word endings?? or not, could be funny
-- remove word count limit?? that could be more fun than limiting
+- ***DONE!*** trash can to get rid of words
+- ***DONE!*** remove word count limit?? that could be more fun than limiting
 - make something similar to trash can that lets you duplicate a word
 
 gallery stuff to do
@@ -43,6 +42,11 @@ collaborative function
 
 https://appendto.com/2016/04/javascript-redirect-how-to-redirect-a-web-page-with-javascript/
 
+----------
+
+brainstorming on how to do things
+
+gallery: gallery div js file spawns a new div inside it with a poem it pulls from the database. default setting is to display most recent poems . other options are to sort by popularity or to just show a random poem.
 
 ----------
 
@@ -65,3 +69,12 @@ PRIORITY LIST
       - when (now, later, soon, never, tomorrow, etc)
       - where (here, there )
         etc
+
+
+-----------
+
+sabine help
+
+1) i broke the image saving thing
+2) database??/ GALLERY?????? how
+3) put that div back where it came from or so heeeellppppp meeee (display only homepage at first, put other js files in appropriate divs HOW)

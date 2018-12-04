@@ -9,10 +9,10 @@ function savePoem() {
   // canvas.todataurl takes whats on the canvas and turns it into data as
   // a png if im understanding correctly
   let poemImageData = canvas.toDataURL('png');
-
+  let fileNameData = filename;
   let dataToSend = {
     base64data : poemImageData ,
-    filename : filename;
+    filename : fileNameData
   }
 
   /* make an ajax request to php -> to save image on the server */

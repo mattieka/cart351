@@ -693,6 +693,7 @@ closet
 cloth
 clothes
 cloud
+clown
 club
 clue
 clumsy

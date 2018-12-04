@@ -51,6 +51,10 @@ var allSpecialButtons = [];
 var endingButtonIndex = 0;
 var specialButtonIndex = 0;
 
+// misc variables
+var filename;
+var trashCanImage;
+
 // JSON VARIABLES -------------------------------------------------------------
 var conjunctionListRaw;
 var determinerListRaw;
@@ -88,6 +92,7 @@ var poemCanvasRandomY;
 
 function preload() {
   preloadWordLists();
+  trashCanImage = loadImage("assets/trash.png");
 }
 
 /****************************************************************************/
