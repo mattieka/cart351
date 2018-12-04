@@ -104,6 +104,8 @@ function setup() {
   trashSetup();
 
   // create onscreen buttons
+  saveButton = new Button (poemCanvasLeft+490,poemCanvasBottom+25,100,50,"Save Poem","Save Button");
+
   wordButton = new Button(poemCanvasLeft+50,poemCanvasBottom+25,100,50,"New Word","Word Button");
   particleButton = new Button(poemCanvasLeft+160,poemCanvasBottom+25,100,50,"New Particle","Word Button");
 
@@ -142,6 +144,8 @@ function draw() {
 
   checkWordEndingButtonState();
   checkSpecialButtonState();
+
+  saveButton.display();
 
   wordEndingsButton.display();
   wordEndingsButton.buttonFunction();

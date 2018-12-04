@@ -178,7 +178,7 @@ function chooseSpecial() {
 /****************************************************************************/
 
 function chooseProfanity() {
-  chosenWordObj = profanityList[round(random(0,profanityList.length))];
+  chosenWordObj = profanityList[floor(random(0,profanityList.length))];
   chosenWord = chosenWordObj.profanity;
   return chosenWord;
 }
@@ -188,7 +188,7 @@ function chooseProfanity() {
 /****************************************************************************/
 
 function choosePopCulture() {
-  chosenWordObj = popCultureList[round(random(0,popCultureList.length))];
+  chosenWordObj = popCultureList[floor(random(0,popCultureList.length))];
   chosenWord = chosenWordObj.popculture;
   return chosenWord;
 }
@@ -198,7 +198,7 @@ function choosePopCulture() {
 /****************************************************************************/
 
 function chooseSlang() {
-  chosenWordObj = slangList[round(random(0,slangList.length))];
+  chosenWordObj = slangList[floor(random(0,slangList.length))];
   chosenWord = chosenWordObj.slang;
   return chosenWord;
 }

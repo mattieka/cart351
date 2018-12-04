@@ -6,7 +6,39 @@ so the canvas is flush with the top left corner.
 
 **********************************************/
 
+/* ENTIRE PAGE */
+
 body {
   padding: 0;
   margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* LINK STUFF */
+a:link {
+  color: white;
+}
+
+a:visited {
+  color: white;
+}
+
+/* TOP BAR NAVIGATION */
+
+#topBar{
+  margin-top: 1.5em;
+  background-color: black;
+}
+
+.topBarLink {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  font-size: 2em;
+  display: inline-block;
+  text-align: center;
+  font-family: 'Overpass Mono', monospace;
+  width: 33%;
 }

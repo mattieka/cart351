@@ -132,6 +132,12 @@ Button.prototype.buttonFunction = function() {
     }
   }
 
+  if (this.text === "Save Poem" && buttonDistance < this.w/2 && buttonDistance < this.h/2) {
+    if (mouseWentDown() === true) {
+      savePoem();
+    }
+  }
+
 }
 
 /****************************************************************************/
