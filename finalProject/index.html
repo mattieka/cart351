@@ -15,6 +15,7 @@
     <script src="js/libraries/p5.sound.min.js"></script>
     <script src="js/libraries/p5.play.js"></script>
     <script src="js/libraries/jquery-3.3.1.min.js"></script>
+    <script src="js/libraries/p5.dom.js"></script>
 
     <!-- My script(s) -->
     <script src="js/homePage.js"></script>
@@ -24,10 +25,11 @@
     <script src="js/Button.js"></script>
     <script src="js/Magnet.js"></script>
     <script src="js/Trash.js"></script>
+    <script src="js/savePoem.js"></script>
 
 
     <!-- jQuery Stuff -->
-    <script>
+    <!-- <script>
         $(document).ready(function() {
           $("#createLink").on({
             click: function(){
@@ -40,7 +42,7 @@
             }
           });
         });
-    </script>
+    </script> -->
 
 
   </head>
@@ -53,10 +55,16 @@
       <div class="topBarLink" id="createLink"><a href="">Create</a></div>
     </div>
 
-    <div id="canvas">
-    </div>
+    <div id="homeContents">honey im HOME </div>
 
-    <p>Main word list pulled from <a href="http://wordlist.aspell.net/12dicts/">here</a>.</p>
+    <div id="galleryContents">yooooo a gallery , eventually</div>
+
+    <div id="createContents"> make a poem create your MAGNUM OPUS!!!</div>
+
+    <div id="credits">Main word list pulled from <a href="http://wordlist.aspell.net/12dicts/">here</a>.</div>
   </body>
+
+
+  <script src="js/linkFunctions.js"></script>
 
 </html>

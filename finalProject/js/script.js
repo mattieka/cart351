@@ -6,7 +6,7 @@ your own virtual magnetic surface where you can write terrible poetry with
 random words. you can share or save your masterpiece, or browse other people's
 magnum opuses. opi?
 
-Made for CART 351 in JS using p5 and p5.play
+Made for CART 351 in JS using p5, jQuery, p5.dom, and p5.play
 
 /****************************************************************************/
                               //VARIABLES
@@ -134,6 +134,7 @@ function setup() {
 /****************************************************************************/
 function draw() {
   background(0);
+
   poemCanvas.display();
 
   wordButton.display();
@@ -146,6 +147,7 @@ function draw() {
   checkSpecialButtonState();
 
   saveButton.display();
+  saveButton.buttonFunction();
 
   wordEndingsButton.display();
   wordEndingsButton.buttonFunction();
