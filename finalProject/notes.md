@@ -13,6 +13,7 @@ Bugs I've Noticed
 - **FIXED** particle generation generates uh. a lot of useless things and not enough the/a/it
 - **FIXED** profanity words return undefined?? no cursing allowed i guess
 - a lot of particles show up in the core word list, comb thru list and eliminate them?? similarly, words have doubles with endings (ex: sand, sanded), get ride of those too? yeesh see yall in five years
+- if you click on any of the extra buttons really fast the program explodes
 
 ---------
 
@@ -26,6 +27,8 @@ poem canvas stuff to do
 - let user post/save their poem (take screenshot and upload/download it?)
 - trash can to get rid of words
 - limit amount of word endings?? or not, could be funny
+- remove word count limit?? that could be more fun than limiting
+- make something similar to trash can that lets you duplicate a word 
 
 gallery stuff to do
 - display user poems

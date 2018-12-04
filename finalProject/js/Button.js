@@ -88,16 +88,57 @@ Button.prototype.buttonFunction = function() {
       console.log("clicked");
       poemCanvasRandomXY();
       words.push(new Magnet(poemCanvasRandomX,poemCanvasRandomY,100,30,this.wordBox,this.text));
+    }
+  }
 
+  if (this.text === "Extras" && buttonDistance < this.w/2 && buttonDistance < this.h/2) {
+    if (mouseWentDown() === true) {
+      if (specialButtonIndex === 0 && specialButtonsState === "off") {
+        specialButtonsState = "on";
+        allSpecialButtons[endingButtonIndex].y = this.y + 60;
+      }
+      else if (specialButtonIndex === 0 && specialButtonsState === "on") {
+        specialButtonIndex = specialButtonIndex + 1;
+        allSpecialButtons[specialButtonIndex].y = this.y + 60;
+      }
+      else if (specialButtonIndex > 0 && specialButtonIndex < allSpecialButtons.length-1){
+        specialButtonIndex = specialButtonIndex + 1;
+        allSpecialButtons[specialButtonIndex].y = this.y + 60;
+      }
+      else if (specialButtonIndex === allSpecialButtons.length-1){
+        specialButtonsState = "off";
+        specialButtonIndex = specialButtonIndex + 1;
+        specialButtonIndex = 0;
+      }
+    }
+  }
+
+  if (this.type === "Extra Button" && buttonDistance < this.w/2 && buttonDistance < this.h/2) {
+    if (mouseWentDown() === true) {
+      console.log("clicked");
+      poemCanvasRandomXY();
+      if (this.text === "Profanity") {
+        let chosenWord = chooseProfanity();
+      }
+
+      if (this.text === "Pop Culture") {
+        let chosenWord = choosePopCulture();
+      }
+
+      if (this.text === "Slang") {
+        let chosenWord = chooseSlang();
+      }
+      words.push(new Magnet(poemCanvasRandomX,poemCanvasRandomY,100,30,this.wordBox,chosenWord));
     }
   }
 
 }
 
 /****************************************************************************/
-                    //CHECK WORD ENDING BUTTON STATE
+                          //CHECK BUTTON STATES
 /****************************************************************************/
 
+// WORD ENDINGS
 function checkWordEndingButtonState() {
   if (wordEndingButtonsState === "on") {
     showWordEndingButtons();
@@ -108,22 +149,45 @@ function checkWordEndingButtonState() {
   }
 }
 
-/****************************************************************************/
-                        //SHOW WORD ENDING BUTTON
-/****************************************************************************/
+// SPECIAL
+function checkSpecialButtonState() {
+  if (specialButtonsState === "on") {
+    showSpecialButtons();
+  }
 
-function showWordEndingButtons() {
-  //allWordEndingButtons[endingButtonIndex-1].y = wordEndingsButton.y;
-  allWordEndingButtons[endingButtonIndex].display();
+  if (specialButtonsState === "off") {
+    hideSpecialButtons();
+  }
 }
 
 /****************************************************************************/
-                        //HIDE WORD ENDING BUTTON
+                              //SHOW BUTTONS
 /****************************************************************************/
 
+// WORD ENDINGS
+function showWordEndingButtons() {
+  allWordEndingButtons[endingButtonIndex].display();
+}
+
+// SPECIAL
+function showSpecialButtons() {
+  allSpecialButtons[specialButtonIndex].display();
+}
+
+/****************************************************************************/
+                              //HIDE BUTTONS
+/****************************************************************************/
+
+// WORD ENDINGS
 function hideWordEndingButtons() {
   endingButtonIndex = 0;
   allWordEndingButtons.y = wordEndingsButton.y;
+}
+
+// SPECIAL
+function hideSpecialButtons() {
+  specialButtonIndex = 0;
+  allSpecialButtons.y = specialWordsButton.y;
 }
 
 /****************************************************************************/
@@ -142,6 +206,7 @@ Word generation:
   - conjunction
   - determiner
   - punctuation
+  - pop culture/profaniy/slang (extras)
 
 Word Endings:
   - s

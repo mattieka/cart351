@@ -27,7 +27,7 @@ wordsMouseInput = function() {
         //console.log(i);
         draggedSprite = words[i].wordBox;
         draggedWordIndex = i;
-        console.log(draggedWordIndex);
+        //console.log(draggedWordIndex);
       }
     };
 
@@ -170,6 +170,36 @@ function chooseSpecial() {
       chosenWord = chosenWordObj.slang;
       break;}
   }
+  return chosenWord;
+}
+
+/****************************************************************************/
+                        //RANDOMLY SELECT PROFANITY
+/****************************************************************************/
+
+function chooseProfanity() {
+  chosenWordObj = profanityList[round(random(0,profanityList.length))];
+  chosenWord = chosenWordObj.profanity;
+  return chosenWord;
+}
+
+/****************************************************************************/
+                        //RANDOMLY SELECT POP CULTURE
+/****************************************************************************/
+
+function choosePopCulture() {
+  chosenWordObj = popCultureList[round(random(0,popCultureList.length))];
+  chosenWord = chosenWordObj.popculture;
+  return chosenWord;
+}
+
+/****************************************************************************/
+                        //RANDOMLY SELECT SLANG
+/****************************************************************************/
+
+function chooseSlang() {
+  chosenWordObj = slangList[round(random(0,slangList.length))];
+  chosenWord = chosenWordObj.slang;
   return chosenWord;
 }
 

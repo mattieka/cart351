@@ -20,7 +20,6 @@ acceptable
 access
 accident
 accidental
-accidentally
 accommodation
 accommodations
 accompany
@@ -42,13 +41,11 @@ across
 act
 action
 active
-actively
 activist
 activity
 actor
 actress
 actual
-actually
 ad
 adapt
 add
@@ -193,7 +190,6 @@ apologize
 apology
 apostrophe
 apparent
-apparently
 appeal
 appear
 appearance
@@ -209,7 +205,6 @@ appropriate
 approval
 approve
 approximate
-approximately
 April
 apt
 architecture
@@ -291,7 +286,6 @@ aware
 away
 awe
 awful
-awfully
 awkward
 baby
 back
@@ -303,7 +297,6 @@ bacon
 bacteria
 bad
 badge
-badly
 bad-tempered
 bag
 baggage
@@ -325,7 +318,6 @@ bar
 barbecue
 barber
 bare
-barely
 bargain
 bark
 barn
@@ -410,7 +402,6 @@ bishop
 bit
 bite
 bitter
-bitterly
 black
 blackboard
 blade
@@ -479,13 +470,11 @@ breed
 bride
 bridge
 brief
-briefly
 bright
 brilliant
 bring
 broad
 broadcast
-broadly
 broken
 brother
 brow
@@ -565,7 +554,6 @@ cardboard
 care
 career
 careful
-carefully
 careless
 caring
 carpet
@@ -608,7 +596,6 @@ century
 cereal
 ceremony
 certain
-certainly
 certainty
 certificate
 chain
@@ -691,7 +678,6 @@ clay
 clean
 cleaner
 clear
-clearly
 clerk
 clever
 click
@@ -757,7 +743,6 @@ commissioner
 commit
 committee
 common
-commonly
 common sense
 communicate
 communication
@@ -777,7 +762,6 @@ competitor
 complain
 complaint
 complete
-completely
 completion
 complex
 complicate
@@ -840,7 +824,6 @@ consistent
 consonant
 conspiracy
 constant
-constantly
 constitution
 construct
 construction
@@ -937,7 +920,6 @@ crisp
 criterion
 critic
 critical
-critically
 criticism
 criticize
 crop
@@ -957,12 +939,10 @@ cupboard
 cure
 curiosity
 curious
-curiously
 curl
 curly
 currency
 current
-currently
 curriculum
 curtain
 curve
@@ -997,7 +977,6 @@ daylight
 daytime
 dead
 deadline
-deadly
 deaf
 deal
 dealer
@@ -1023,7 +1002,6 @@ decoration
 decorative
 decrease
 deep
-deeply
 defeat
 defect
 defend
@@ -1033,7 +1011,6 @@ defense
 deficit
 define
 definite
-definitely
 definition
 degree
 delay
@@ -1081,7 +1058,6 @@ desire
 desk
 despair
 desperate
-desperately
 despite
 destination
 destroy
@@ -1121,7 +1097,6 @@ dip
 diplomat
 direct
 direction
-directly
 director
 dirt
 dirty
@@ -1272,10 +1247,8 @@ education
 educational
 effect
 effective
-effectively
 efficiency
 efficient
-efficiently
 effort
 egg
 eight
@@ -1287,7 +1260,6 @@ eighty
 either
 elbow
 elder
-elderly
 elect
 election
 electoral
@@ -1315,7 +1287,6 @@ emerge
 emergency
 emotion
 emotional
-emotionally
 emphasis
 emphasize
 empire
@@ -1353,19 +1324,16 @@ entertainment
 enthusiasm
 enthusiastic
 entire
-entirely
 entitle
 entrance
 entry
 envelope
 environment
 environmental
-environmentally
 envy
 episode
 equal
 equality
-equally
 equip
 equipment
 equity
@@ -1377,7 +1345,6 @@ escape
 especially
 essay
 essential
-essentially
 establish
 establishment
 estate
@@ -1398,11 +1365,9 @@ everything
 everywhere
 evidence
 evident
-evidently
 evil
 evolution
 exact
-exactly
 exaggerate
 exam
 examination
@@ -1469,7 +1434,6 @@ extract
 extraordinarily
 extraordinary
 extreme
-extremely
 eye
 eyebrow
 fabric
@@ -1485,11 +1449,9 @@ fail
 failure
 faint
 fair
-fairly
 fairy
 faith
 faithful
-faithfully
 fall
 false
 fame
@@ -1551,12 +1513,10 @@ file
 fill
 film
 final
-finally
 finance
 financial
 find
 fine
-finely
 finger
 finish
 finished
@@ -1564,10 +1524,7 @@ fire
 fire brigade
 firework
 firm
-firmly
 first
-firstly
-first name
 fiscal
 fish
 fisherman
@@ -1609,7 +1566,6 @@ fool
 foolish
 foot
 football
-for
 forbid
 forbidden
 force
@@ -1624,12 +1580,10 @@ fork
 form
 formal
 former
-formerly
 formula
 forth
 fortieth
 fortunate
-fortunately
 fortune
 forty
 forward
@@ -1646,17 +1600,13 @@ frame
 frankly
 free
 freedom
-freely
 freeze
 frequent
-frequently
 fresh
-freshly
 Friday
 fridge
 fried
 friend
-friendly
 friendship
 frighten
 frog
@@ -1710,16 +1660,13 @@ gear
 gender
 gene
 general
-generally
 generate
 generation
 generous
-generously
 gentle
 gentleman
 gently
 genuine
-genuinely
 geography
 gesture
 get
@@ -1768,7 +1715,6 @@ grab
 graceful
 grade
 gradual
-gradually
 graduate
 grain
 gram
@@ -1791,7 +1737,6 @@ gravity
 gray
 grey
 great
-greatly
 green
 greet
 grief
@@ -1846,7 +1791,6 @@ happiness
 happy
 harbor
 hard
-hardly
 hardware
 hard-working
 harm
@@ -1898,7 +1842,6 @@ hidden
 hide
 high
 highlight
-highly
 high school
 highway
 hill
@@ -1925,14 +1868,12 @@ home
 homeless
 homework
 honest
-honestly
 honesty
 honey
 honor
 hook
 hope
 hopeful
-hopefully
 hopeless
 horizontal
 horn
@@ -1956,7 +1897,6 @@ however
 hug
 huge
 human
-human rights
 humid
 humor
 humorous
@@ -1969,15 +1909,12 @@ hurry
 hurt
 husband
 hut
-hyphen
-I
 ice
 ice cream
 icy
 ID
 idea
 ideal
-ideally
 identical
 identification
 identify
@@ -1996,7 +1933,6 @@ imagination
 imagine
 imitate
 immediate
-immediately
 immigrant
 immigration
 immoral
@@ -2009,7 +1945,6 @@ impolite
 import
 importance
 important
-importantly
 impose
 impossible
 impress
@@ -2054,7 +1989,6 @@ information
 ingredient
 inhabitant
 initial
-initially
 initiative
 injure
 injured
@@ -2075,7 +2009,6 @@ inspector
 install
 instance
 instant
-instantly
 instead
 institute
 institution
@@ -2135,7 +2068,6 @@ irritate
 island
 isolated
 issue
-it
 IT
 itch
 item
@@ -2187,7 +2119,6 @@ kill
 kilogram
 kilometer
 kind
-kindly
 kindness
 king
 kingdom
@@ -2226,15 +2157,11 @@ lane
 language
 lap
 large
-largely
 laser
 last
-lastly
 last-minute
 last name
 late
-lately
-later
 latest
 latter
 laugh
@@ -2264,7 +2191,6 @@ left
 left-hand
 leg
 legal
-legally
 legend
 legislation
 leisure
@@ -2291,7 +2217,6 @@ lift
 light
 lightning
 like
-likely
 limit
 limited
 line
@@ -2307,7 +2232,6 @@ literature
 litter
 little
 live
-lively
 liver
 living
 living room
@@ -2328,9 +2252,7 @@ long-distance
 long-term
 look
 loose
-loosely
 lord
-lorry
 lose
 loss
 lost
@@ -2338,8 +2260,6 @@ lot
 lottery
 loud
 love
-lovely
-lover
 low
 lower
 loyal
@@ -2359,10 +2279,8 @@ magazine
 magic
 magical
 magnificent
-magnificently
 mail
 main
-mainly
 maintain
 maintenance
 major
@@ -2408,7 +2326,6 @@ may
 May
 maybe
 mayor
-me
 meal
 mean
 meaningful
@@ -2433,13 +2350,11 @@ membership
 memory
 mend
 mental
-mentally
 mention
 menu
 merchant
 mercy
 mere
-merely
 merger
 mess
 message
@@ -2483,9 +2398,7 @@ mist
 mistake
 misunderstand
 mix
-mixed
 mixture
-mm:
 mobile
 mobile phone
 mode
@@ -2502,23 +2415,18 @@ monitor
 monkey
 monster
 month
-monthly
 monument
 mood
 moon
 moonlight
 moral
-morally
 more
 moreover
 morning
 mortgage
-mosque
 mosquito
 most
-mostly
 mother
-mother tongue
 motion
 motivate
 motivation
@@ -2535,13 +2443,10 @@ mouth
 move
 movement
 movie
-movie theater
 moving
-MP
 Mr.
 Mrs.
 Ms.
-much
 mud
 mug
 multiply
@@ -2554,7 +2459,6 @@ mushroom
 music
 musical
 musician
-Muslim
 must
 mutter
 mutual
@@ -2567,7 +2471,6 @@ nail
 naked
 name
 narrow
-narrowly
 nation
 national
 nationalist
@@ -2576,14 +2479,12 @@ nationwide
 native
 native speaker
 natural
-naturally
 nature
 naughty
 naval
 navy
 near
 nearby
-nearly
 neat
 necessarily
 necessary
@@ -2598,7 +2499,6 @@ neither
 nephew
 nerve
 nervous
-nervously
 nest
 net
 network
@@ -2606,12 +2506,10 @@ neutral
 never
 nevertheless
 new
-newly
 news
 newspaper
 next
 nice
-nicely
 nickname
 niece
 night
@@ -2633,7 +2531,6 @@ noon
 no one
 nor
 normal
-normally
 north
 northeast
 northern
@@ -2673,9 +2570,8 @@ obsessed
 obsession
 obtain
 obvious
-obviously
 occasion
-occasionally
+occasional
 occupation
 occupy
 occur
@@ -2683,7 +2579,6 @@ ocean
 o'clock
 October
 odd
-of
 off
 offend
 offender
@@ -2693,7 +2588,6 @@ offer
 office
 officer
 official
-officially
 often
 oh
 oil
@@ -2737,7 +2631,6 @@ organized
 organizer
 origin
 original
-originally
 other
 otherwise
 ought
@@ -2807,8 +2700,7 @@ partial
 participate
 particle
 particular
-particularly
-partly
+part
 partner
 partnership
 part-time
@@ -2857,7 +2749,6 @@ per
 percent
 percentage
 perfect
-perfectly
 perform
 performance
 performer
@@ -2870,7 +2761,6 @@ permit
 person
 personal
 personality
-personally
 personnel
 perspective
 persuade
@@ -2889,7 +2779,6 @@ photographer
 photography
 phrase
 physical
-physically
 physics
 piano
 pick
@@ -2927,7 +2816,6 @@ play
 player
 playground
 pleasant
-pleasantly
 please
 pleased
 pleasure
@@ -2958,9 +2846,7 @@ policewoman
 policy
 polish
 polite
-politely
 political
-politically
 politician
 politics
 poll
@@ -2979,7 +2865,6 @@ portion
 pose
 position
 positive
-positively
 possess
 possession
 possibility
@@ -2994,7 +2879,6 @@ postpone
 pot
 potato
 potential
-potentially
 pottery
 pound
 pour
@@ -3003,7 +2887,6 @@ powder
 power
 powerful
 practical
-practically
 practice
 praise
 prawn
@@ -3011,7 +2894,6 @@ pray
 prayer
 precious
 precise
-precisely
 predict
 predictable
 prediction
@@ -3047,7 +2929,6 @@ pretty
 prevent
 prevention
 previous
-previously
 price
 pride
 priest
@@ -3065,7 +2946,6 @@ prison
 prisoner
 privacy
 private
-privately
 privilege
 prize
 probable
@@ -3096,13 +2976,11 @@ promise
 promote
 promotion
 prompt
-promptly
 pronoun
 pronounce
 pronunciation
 proof
 proper
-properly
 property
 proportion
 proposal
@@ -3115,7 +2993,6 @@ protective
 protein
 protest
 proud
-proudly
 prove
 provide
 province
@@ -3128,7 +3005,6 @@ pub
 public
 publication
 publicity
-publicly
 public transport
 publish
 pudding
@@ -3142,7 +3018,6 @@ pupil
 puppy
 purchase
 pure
-purely
 purple
 purpose
 purse
@@ -3164,9 +3039,7 @@ question mark
 questionnaire
 queue
 quick
-quickly
 quiet
-quietly
 quit
 quite
 quiz
@@ -3194,7 +3067,6 @@ rap
 rape
 rapid
 rare
-rarely
 rat
 rate
 rather
@@ -3210,7 +3082,6 @@ real
 realistic
 reality
 realize
-really
 rear
 reason
 reasonable
@@ -3221,7 +3092,6 @@ recall
 receipt
 receive
 recent
-recently
 reception
 receptionist
 recession
@@ -3262,7 +3132,6 @@ register
 registration
 regret
 regular
-regularly
 regulation
 rehearsal
 reject
@@ -3271,7 +3140,6 @@ related
 relation
 relationship
 relative
-relatively
 relax
 relaxation
 release
@@ -3300,7 +3168,6 @@ repair
 repay
 repeat
 repeated
-repeatedly
 replace
 replacement
 reply
@@ -3369,7 +3236,6 @@ ride
 rider
 ridiculous
 right
-rightly
 ring
 riot
 rip
@@ -3395,7 +3261,6 @@ rope
 rose
 rotten
 rough
-roughly
 round
 roundabout
 route
@@ -3422,7 +3287,6 @@ rusty
 sack
 sacrifice
 sad
-sadly
 sadness
 safe
 safety
@@ -3488,10 +3352,8 @@ seat
 second
 secondary
 second-hand
-secondly
 secret
 secretary
-secretly
 section
 sector
 secure
@@ -3522,12 +3384,10 @@ sensible
 sensitive
 sentence
 separate
-separately
 separation
 September
 series
 serious
-seriously
 servant
 serve
 server
@@ -3542,7 +3402,6 @@ seventh
 seventy
 several
 severe
-severely
 sew
 sex
 sexual
@@ -3559,7 +3418,6 @@ shaped
 share
 shareholder
 sharp
-sharply
 shave
 she
 shed
@@ -3582,7 +3440,6 @@ shopkeeper
 shore
 short
 shortage
-shortly
 shorts
 short-term
 shot
@@ -3605,7 +3462,6 @@ sign
 signal
 signature
 significant
-significantly
 silence
 silent
 silk
@@ -3613,7 +3469,6 @@ silly
 silver
 similar
 similarity
-similarly
 simple
 simply
 sin
@@ -3653,22 +3508,18 @@ sleeve
 slice
 slide
 slight
-slightly
 slim
 slip
 slope
 slow
-slowly
 small
 smart
 smash
 smell
 smile
 smoke
-smoker
 smoking
 smooth
-smoothly
 snake
 snap
 snow
@@ -3684,7 +3535,6 @@ sock
 sofa
 soft
 soft drink
-softly
 software
 soil
 solar
@@ -3728,7 +3578,6 @@ speaker
 special
 specialist
 specialize
-specially
 species
 specific
 specifically
@@ -3820,8 +3669,6 @@ straight
 straightforward
 strain
 strange
-strangely
-stranger
 strap
 strategic
 strategy
@@ -3833,7 +3680,6 @@ strengthen
 stress
 stretch
 strict
-strictly
 strike
 striking
 string
@@ -3841,7 +3687,6 @@ strip
 stripe
 stroke
 strong
-strongly
 structure
 struggle
 stubborn
@@ -3858,18 +3703,15 @@ submit
 subsidy
 substance
 substantial
-substantially
 substitute
 suburb
 subway
 succeed
 success
 successful
-successfully
 such
 suck
 sudden
-suddenly
 suffer
 sufficient
 suffix
@@ -3905,7 +3747,6 @@ suppose
 supposed
 supreme
 sure
-surely
 surf
 surface
 surgery
@@ -4012,9 +3853,6 @@ texture
 than
 thank
 thanks
-thank you
-that
-the
 theatre
 theft
 their
@@ -4044,7 +3882,6 @@ thirtieth
 thirty
 this
 thorough
-thoroughly
 those
 though
 thought
@@ -4069,7 +3906,6 @@ tie
 tiger
 tight
 tighten
-tightly
 till
 time
 timetable
@@ -4102,7 +3938,6 @@ top
 topic
 torture
 total
-totally
 touch
 tough
 tour
@@ -4122,7 +3957,6 @@ trade
 trading
 tradition
 traditional
-traditionally
 traffic
 tragedy
 tragic
@@ -4191,10 +4025,8 @@ twisted
 two
 type
 typical
-typically
 ugly
 ultimate
-ultimately
 umbrella
 unable
 unacceptable
@@ -4227,7 +4059,6 @@ unfair
 unfamiliar
 unfit
 unfortunate
-unfortunately
 unfriendly
 unhappy
 unhealthy
@@ -4246,7 +4077,6 @@ unkind
 unknown
 unless
 unlike
-unlikely
 unlimited
 unlucky
 unnatural
@@ -4263,7 +4093,6 @@ untidy
 untie
 until
 unusual
-unusually
 unwilling
 up
 upbringing
@@ -4287,7 +4116,6 @@ useful
 useless
 user
 usual
-usually
 vacant
 vacation
 valid
@@ -4326,10 +4154,8 @@ viewer
 village
 violence
 violent
-violently
 violin
 virtual
-virtually
 virtue
 virus
 visa
@@ -4364,7 +4190,6 @@ war
 ward
 wardrobe
 warm
-warmly
 warmth
 warn
 wash
@@ -4377,7 +4202,6 @@ waterfall
 waterproof
 wave
 way
-we
 weak
 weaken
 weakness
@@ -4396,7 +4220,6 @@ Wednesday
 weed
 week
 weekend
-weekly
 weigh
 weight
 weird
@@ -4434,7 +4257,6 @@ whose
 why
 wicket
 wide
-widely
 widen
 widespread
 widow
@@ -4442,7 +4264,6 @@ width
 wife
 wild
 wildlife
-wildly
 will
 win
 wind
@@ -4458,7 +4279,6 @@ wire
 wisdom
 wise
 wish
-with
 withdraw
 within
 without
@@ -4493,7 +4313,6 @@ write
 writing
 written
 wrong
-wrongly
 X-ray
 yacht
 yard

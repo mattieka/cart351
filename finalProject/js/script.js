@@ -12,32 +12,46 @@ Made for CART 351 in JS using p5 and p5.play
                               //VARIABLES
 /****************************************************************************/
 
-// GENERAL CANVAS-RELATED VARIABLES
+// GENERAL CANVAS-RELATED VARIABLES--------------------------------------------
 var poemCanvas;
 
-// GENERAL SPRITE-RELATED VARIABLES
+// GENERAL SPRITE-RELATED VARIABLES--------------------------------------------
 var draggedSprite = null; //initialize variable of any sprite that can be dragged
 var draggedWordIndex = 0;
+var wordSprites; //variable for the group of all displayed words
 
-// WORD-RELATED VARIABLES
+// WORD-RELATED VARIABLES -----------------------------------------------------
 var words = []; // array that stores displayed words
 var listNum; //variable that stores a number that refers to a word list
 var chosenWord; //variable that stores a word from JSON selected by the chooseWord function
+
+// word-counting variables
 var extraWordCount = 0 // variable that keeps count of extra words
-var wordSprites; //variable for the group of all displayed words
 var startCoreWordCount = 0;
 var startParticleCount = 0;
 var startSpecialCount = 0;
 
-// BUTTON RELATED VARIABLES
+// BUTTON RELATED VARIABLES----------------------------------------------------
 var buttonDistance; //calculates distance between mouse and button
 var magnetColor;
+
+// individual buttons
 var wordButton; // variable for the button that generates a new word
 var particleButton;
 var wordEndingsButton;
-var wordEndingButtonsState = "off";
+var specialWordsButton;
 
-// JSON VARIABLES
+// button states
+var wordEndingButtonsState = "off";
+var specialButtonsState = "off";
+
+// button category arrays
+var allWordEndingButtons = [];
+var allSpecialButtons = [];
+var endingButtonIndex = 0;
+var specialButtonIndex = 0;
+
+// JSON VARIABLES -------------------------------------------------------------
 var conjunctionListRaw;
 var determinerListRaw;
 var prepositionListRaw;
@@ -48,7 +62,7 @@ var popCultureListRaw;
 var slangListRaw;
 var coreParticleListRaw;
 
-// ARRAY VARIABLES
+// ARRAY VARIABLES ------------------------------------------------------------
 var conjunctionList = [];
 var determinerList = [];
 var prepositionList = [];
@@ -58,18 +72,15 @@ var mainWordList = [];
 var profanityList = [];
 var popCultureList = [];
 var slangList = [];
-var allWordEndingButtons = [];
 var coreParticleList = [];
 
-//POEM CANVAS SHORTCUT VARIABLES
+//POEM CANVAS SHORTCUT VARIABLES ----------------------------------------------
 var poemCanvasLeft;
 var poemCanvasRight;
 var poemCanvasTop;
 var poemCanvasBottom;
 var poemCanvasRandomX;
 var poemCanvasRandomY;
-
-var endingButtonIndex =0;
 
 /****************************************************************************/
                               //PRELOAD
@@ -95,8 +106,10 @@ function setup() {
   // create onscreen buttons
   wordButton = new Button(poemCanvasLeft+50,poemCanvasBottom+25,100,50,"New Word","Word Button");
   particleButton = new Button(poemCanvasLeft+160,poemCanvasBottom+25,100,50,"New Particle","Word Button");
-  //addSButton = new Button(poemCanvasLeft+270,poemCanvasBottom+25,100,50,"Add 'S'","S Button");
+
   wordEndingsButton = new Button(poemCanvasLeft+270,poemCanvasBottom+25,100,50,"Word Endings","Word Button");
+  specialWordsButton = new Button(poemCanvasLeft+380,poemCanvasBottom+25,100,50,"Extras","Word Button");
+
 
   allWordEndingButtons.push (new Button(poemCanvasLeft+270,poemCanvasBottom+25,100,50,"ly","Ending Button"));
   allWordEndingButtons.push (new Button(poemCanvasLeft+270,poemCanvasBottom+25,100,50,"s","Ending Button"));
@@ -109,6 +122,9 @@ function setup() {
   allWordEndingButtons.push (new Button(poemCanvasLeft+270,poemCanvasBottom+25,100,50,"y","Ending Button"));
   allWordEndingButtons.push (new Button(poemCanvasLeft+270,poemCanvasBottom+25,100,50,"en","Ending Button"));
 
+  allSpecialButtons.push (new Button(poemCanvasLeft+380,poemCanvasBottom+25,100,50,"Profanity","Extra Button"));
+  allSpecialButtons.push (new Button(poemCanvasLeft+380,poemCanvasBottom+25,100,50,"Pop Culture","Extra Button"));
+  allSpecialButtons.push (new Button(poemCanvasLeft+380,poemCanvasBottom+25,100,50,"Slang","Extra Button"));
 
 }
 /****************************************************************************/
@@ -121,18 +137,21 @@ function draw() {
   wordButton.display();
   wordButton.buttonFunction();
 
-  // addSButton.display();
-  // addSButton.buttonFunction();
-
   particleButton.display();
   particleButton.buttonFunction();
 
   checkWordEndingButtonState();
+  checkSpecialButtonState();
 
   wordEndingsButton.display();
   wordEndingsButton.buttonFunction();
 
   allWordEndingButtons[endingButtonIndex].buttonFunction();
+
+  specialWordsButton.display();
+  specialWordsButton.buttonFunction();
+
+  allSpecialButtons[specialButtonIndex].buttonFunction();
 
   wordsMouseInput();
   dragWord();
