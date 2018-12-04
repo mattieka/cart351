@@ -28,7 +28,7 @@ poem canvas stuff to do
 - trash can to get rid of words
 - limit amount of word endings?? or not, could be funny
 - remove word count limit?? that could be more fun than limiting
-- make something similar to trash can that lets you duplicate a word 
+- make something similar to trash can that lets you duplicate a word
 
 gallery stuff to do
 - display user poems
@@ -45,3 +45,23 @@ https://appendto.com/2016/04/javascript-redirect-how-to-redirect-a-web-page-with
 
 
 ----------
+
+PRIORITY LIST
+
+1) Make other pages!!!
+  - homepage
+  - gallery page
+
+2) Let users save/post their poem!!!
+
+3) Gallery functionality!!
+  - display user poems
+  - display random poem
+  - display most popular poem
+
+4) Refinements!!
+  - particle button improvement
+      - who/what (I, me, him, her, his, he, she, they, them, their, it)
+      - when (now, later, soon, never, tomorrow, etc)
+      - where (here, there )
+        etc

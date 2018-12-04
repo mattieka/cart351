@@ -11,8 +11,10 @@
     <script src="js/libraries/p5.min.js"></script>
     <script src="js/libraries/p5.sound.min.js"></script>
     <script src="js/libraries/p5.play.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
     <!-- My script(s) -->
+    <script src="js/homePage.js"></script>
     <script src="js/script.js"></script>
     <script src="js/PoemWindow.js"></script>
     <script src="js/Word.js"></script>
@@ -20,9 +22,37 @@
     <script src="js/Magnet.js"></script>
     <script src="js/Trash.js"></script>
 
+
+    <!-- jQuery Stuff -->
+    <script>
+        $(document).ready(function() {
+          $("#createLink").on({
+            click: function(){
+              $("#canvas").load("js/script.js")
+            }
+          });
+          $("homeLink").on({
+            click: function(){
+              $("#canvas").load("js/homePage.js")
+            }
+          });
+        });
+    </script>
+
+
   </head>
 
   <body>
+
+    <div id="topBar">
+      <div id="homeLink"><a href="">Home</a></div>
+      <div id="galleryLink"><a href="">Gallery</a></div>
+      <div id="createLink"><a href="">Create</a></div>
+    </div>
+
+    <div id="canvas">
+    </div>
+
     <p>Main word list pulled from <a href="http://wordlist.aspell.net/12dicts/">here</a>.</p>
   </body>
 
