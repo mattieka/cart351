@@ -2,6 +2,7 @@
                               //BUTTON OBJECT
 /****************************************************************************/
 
+
 /****************************************************************************/
                               //CONSTRUCTOR
 /****************************************************************************/
@@ -26,6 +27,7 @@ Button.prototype.display = function() {
   noStroke();
   rect(this.x,this.y,this.w,this.h);
   textAlign(CENTER);
+  textSize(15);
   fill(0);
   text(this.text,this.x,this.y);
 }
@@ -133,16 +135,29 @@ Button.prototype.buttonFunction = function() {
   }
 
   if (this.text === "Upload Poem" && buttonDistance < this.w/2 && buttonDistance < this.h/2) {
-    if (mouseWentDown() === true) {
-      let input = createInput();
-      input.position(this.x-this.w/2,poemCanvasTop+this.y+this.h);
-      let button = createButton('submit');
-      button.position(input.x + input.width + 10,input.y);
-      filename = input.value()
-      button.mousePressed(savePoem);
+   if (mouseWentDown() === true) {
+     if (submitButtonState === "off") {
+       submitButtonState = "on";
+        var filename = prompt('Give your poem a beautiful name!');
+        var author = prompt("And who is the author of "+filename+"?");
+      //  saveCanvas(filename+"_by_"+author,'png');
+        savePoem(filename,author);
+        if(author) alert("Poem uploaded!");
+
     }
+
+
+     else if (submitButtonState === "on") {
+       submitButtonState = "off";
+     }
+   }
   }
 
+  // if (this.text === "Submit" && buttonDistance < this.w/2 && buttonDistance < this.h/2 && submitButtonState === "on") {
+  //   if (mouseWentDown() === true) {
+  //     console.log("button pressed");
+  //   }
+  // }
 }
 
 /****************************************************************************/
@@ -171,6 +186,18 @@ function checkSpecialButtonState() {
   }
 }
 
+// SUBMIT BUTTONS
+function checkSubmitButtonState() {
+  if (submitButtonState === "on") {
+    showSubmitButton();
+
+  }
+
+  if (submitButtonState === "off") {
+    submitButton.y = saveButton.y;
+  }
+}
+
 /****************************************************************************/
                               //SHOW BUTTONS
 /****************************************************************************/
@@ -183,6 +210,12 @@ function showWordEndingButtons() {
 // SPECIAL
 function showSpecialButtons() {
   allSpecialButtons[specialButtonIndex].display();
+}
+
+function showSubmitButton() {
+  submitButton.y = saveButton.y + 60;
+  submitButton.display();
+  console.log(submitButton.y,saveButton.y)
 }
 
 /****************************************************************************/

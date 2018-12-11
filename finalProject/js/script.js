@@ -44,6 +44,7 @@ var specialWordsButton;
 // button states
 var wordEndingButtonsState = "off";
 var specialButtonsState = "off";
+var submitButtonState = "off";
 
 // button category arrays
 var allWordEndingButtons = [];
@@ -53,6 +54,7 @@ var specialButtonIndex = 0;
 
 // misc variables
 var filename;
+var author;
 var trashCanImage;
 
 // JSON VARIABLES -------------------------------------------------------------
@@ -102,13 +104,15 @@ function preload() {
 function setup() {
   convertToArray();
   //console.log(conjunctionList.length);
-  createCanvas(800,800);
+ createCanvas(800,800);
   poemCanvas = new PoemWindow(width/2,height/2,600,height/2);
   updateCanvasVariables();
   wordsSetup();
   trashSetup();
 
+
   // create onscreen buttons
+  submitButton = new Button(poemCanvasLeft+490,poemCanvasBottom+25,100,50,"Submit","Save Button");
   saveButton = new Button (poemCanvasLeft+490,poemCanvasBottom+25,100,50,"Upload Poem","Save Button");
 
   wordButton = new Button(poemCanvasLeft+50,poemCanvasBottom+25,100,50,"New Word","Word Button");
@@ -116,7 +120,6 @@ function setup() {
 
   wordEndingsButton = new Button(poemCanvasLeft+270,poemCanvasBottom+25,100,50,"Word Endings","Word Button");
   specialWordsButton = new Button(poemCanvasLeft+380,poemCanvasBottom+25,100,50,"Extras","Word Button");
-
 
   allWordEndingButtons.push (new Button(poemCanvasLeft+270,poemCanvasBottom+25,100,50,"ly","Ending Button"));
   allWordEndingButtons.push (new Button(poemCanvasLeft+270,poemCanvasBottom+25,100,50,"s","Ending Button"));
@@ -151,8 +154,6 @@ function draw() {
   checkWordEndingButtonState();
   checkSpecialButtonState();
 
-  saveButton.display();
-  saveButton.buttonFunction();
 
   wordEndingsButton.display();
   wordEndingsButton.buttonFunction();
@@ -164,12 +165,18 @@ function draw() {
 
   allSpecialButtons[specialButtonIndex].buttonFunction();
 
+
+
   wordsMouseInput();
   dragWord();
   drawSprites();
   magnetsDraw();
 
+  //checkSubmitButtonState();
+  saveButton.display();
+  saveButton.buttonFunction();
 
+  //submitButton.buttonFunction();
 }
 
 
