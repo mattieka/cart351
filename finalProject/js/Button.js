@@ -97,7 +97,7 @@ Button.prototype.buttonFunction = function() {
     if (mouseWentDown() === true) {
       if (specialButtonIndex === 0 && specialButtonsState === "off") {
         specialButtonsState = "on";
-        allSpecialButtons[endingButtonIndex].y = this.y + 60;
+        allSpecialButtons[specialButtonIndex].y = this.y + 60;
       }
       else if (specialButtonIndex === 0 && specialButtonsState === "on") {
         specialButtonIndex = specialButtonIndex + 1;
